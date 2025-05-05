@@ -1,12 +1,23 @@
-.contactWrapper {
+.fullWrapper {
+    
     padding: 4rem 2rem;
+  }
+  
+  .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .formSection {
+    flex: 1 1 400px;
+    max-width: 500px;
   }
   
   .form {
-    max-width: 600px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -17,24 +28,30 @@
       font-weight: bold;
     }
   
-    input, textarea {
+    input,
+    textarea {
       padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+      border: 1px solid #ffd700 ;
+      border-radius: 6px;
       font-size: 1rem;
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
   
     button {
-      padding: 0.75rem;
+      padding: 0.75rem 2rem;
       background-color: #232f45;
       color: white;
       font-weight: bold;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
+      width: fit-content;
+      align-self: center;
+      box-shadow: 2px 2px 0 #b6d8df;
   
       &:hover {
-        background-color: #1e293b;
+        opacity: 0.9;
       }
     }
   
@@ -47,7 +64,55 @@
       color: green;
       font-weight: bold;
       margin-top: 1rem;
+      text-align: center;
     }
   }
+  
+  .infoSection {
+    flex: 1 1 300px;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .infoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+    color: #232f45;
+
+  
+    h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+  
+    p {
+      margin: 0.25rem 0;
+      font-size: 1rem;
+    }
+  
+    .icon {
+      font-size: 2.4rem;
+      color: #232f45;
+      margin-bottom: 0.5rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .formSection,
+    .infoSection {
+      max-width: 90%;
+    }
+  }
+    
   
   
