@@ -1,5 +1,5 @@
 @use "sass:color";
-@use '../../styles/scss/abstracts/' as *;
+@use '@/styles/scss/abstracts/' as *;
 
 .header {
   margin-top: 30px;
@@ -9,7 +9,6 @@
   align-items: center;
   justify-content:space-between;
   padding: 0 2rem;
-  margin-bottom: 100px;
 
   .brand img {
     font-size: 1.7rem;

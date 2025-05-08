@@ -1,13 +1,17 @@
-// import "@/styles/globals.css";
+import { Fragment } from "react";
+
 import "@/styles/scss/main.scss";
+import Layout from "@/components/layout";
 
-import Header from '@/components/layout/Header'
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <>
-      <Header />
+    <Fragment>
+      <Layout>
       <Component {...pageProps} />
-    </>
+      </Layout>
+    </Fragment>
   )
 }
+
+export default App;

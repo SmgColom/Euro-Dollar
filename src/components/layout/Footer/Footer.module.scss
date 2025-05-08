@@ -1,0 +1,8 @@
+@use '@/styles/scss/abstracts/' as *;
+
+.footerbottom {
+  background: $primaryColor;
+  color: $complementaryColor;
+  text-align: center;
+  padding: 1rem 0;
+}

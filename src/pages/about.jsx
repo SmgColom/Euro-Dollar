@@ -7,7 +7,7 @@ const AboutPage = () => {
     </div>
     
 
-    <h1>Soy Mile, tu asesora de protección familiar y patrimonial</h1>
+    <h1>Soy Mile Toro, tu asesora de protección familiar y patrimonial</h1>
     <p>Porque cuidar lo que más quieres no debería ser complicado.Soy asesora de seguros y estoy para acompañarte con empatía, claridad y el respaldo de la mano de la compañía que cumple cuando más lo necesitás.solo dime qué te preocupa, y construimos juntos la mejor solución. 💙</p>
   </div>;
 };
