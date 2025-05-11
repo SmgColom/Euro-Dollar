@@ -14,7 +14,7 @@ function Header() {
         <ul>
           <li><Link href="/">Inicio</Link></li>        
           <li><Link href="/about">Quien Soy Yo</Link></li>
-          <li><Link href="/news">Entérate</Link></li>
+          <li><Link href="/news/blog">Salud y Bienestar</Link></li>
           <li><Link href="/contact">Contáctame</Link></li>        
         </ul>
       </nav>

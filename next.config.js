@@ -19,8 +19,20 @@ module.exports = (phase) => {
         hostname: '**.bbci.co.uk',
       },
       {
+        protocol: 'http',
+        hostname: '**.bbc.co.uk',
+      },
+      {
         protocol: 'https',
         hostname: '**.abc-cdn.net.au',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.**',
+      },
+      {
+        protocol: 'https',
+        hostname: '**.**.**',
       },
     ]
   }
@@ -28,7 +40,7 @@ module.exports = (phase) => {
   const env = {
     SERVER_NAME: (() => {
       if (isDev) return 'http://localhost:3000/'
-      if (isProd) return 'https://YOUR-DOMAIN-HERE.vercel.app/'
+      if (isProd) return 'https://miletoroseguros.vercel.app/'
     })(),
     NEWS_API_KEY: process.env.NEWS_API_KEY,
   }
@@ -40,4 +52,3 @@ module.exports = (phase) => {
     env,
   }
 }
-

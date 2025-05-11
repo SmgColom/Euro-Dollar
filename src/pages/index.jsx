@@ -9,8 +9,6 @@ function HomePage() {
       title="Proteccion personal y patrimonial para toda la familia"
       description="Construyamos juntos las mejores souciones de seguros a la medida de tus necesidades"
       bgImage="/backgrounds/Imagenperfil.jpeg"
-
-
       />
     </Fragment>
   )
