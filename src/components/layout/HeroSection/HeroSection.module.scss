@@ -5,18 +5,16 @@
   background: no-repeat center/cover;  
   height: 25vh;
 
-
- 
-
   .overlay {
     background-color: rgba(213, 213, 240, 0.5);
     height: 25vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
     justify-content: center;
-    
-    
+    margin: 0 auto;
+ 
 
     h1 {
       margin: 0.5rem 0;
