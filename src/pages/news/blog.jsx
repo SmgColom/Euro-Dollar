@@ -1,4 +1,4 @@
-import { useState, useEffect, Fragment } from "react"
+import { Fragment } from "react"
 import Head from "next/head"
 
 import HeroSection from "@/components/layout/HeroSection"
@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
     props: {
       WellnessArticles: articles
     },
-    revalidate: 3600  // ISR
+    revalidate: 60  // ISR
   };
 };
 
