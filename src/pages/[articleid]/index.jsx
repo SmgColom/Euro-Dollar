@@ -31,8 +31,8 @@ export const getStaticPaths = async () => {
   const data = await response.json();
   const articles = data.articles;
 
-  const paths = articles.map((article, index) => ({
-    params: { articleId: index.toString() }
+  const paths = articles.map((_, index) => ({
+    params: { articleid: index.toString() },
   }));
 
   return {
@@ -41,24 +41,20 @@ export const getStaticPaths = async () => {
   };
 }
 
-
-// STATIC SITE GENERATION (snippet: "ngsp")
-
-js
-Copiar
-Editar
 export const getStaticProps = async (context) => {
   const response = await fetch(`https://newsapi.org/v2/everything?q=health+OR+wellness&language=es&pageSize=6&apiKey=${process.env.WELLNESS_API_KEY}`);
   const data = await response.json();
   const articles = data.articles;
 
-  const articleQuery = parseInt(context.params.articleId);
-  const articleMatch = articles[articleQuery];
+  const articleIndex = parseInt(context.params.articleid);
+  const article = articles[articleIndex];
+
+  if (!article) {
+    return { notFound: true };
+  }
 
   return {
-    props: {
-      article: articleMatch
-    },
+    props: { article },
   };
 };
 
