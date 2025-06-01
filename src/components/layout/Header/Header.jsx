@@ -5,12 +5,25 @@ import styles from './Header.module.scss';
 function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleScroll = () => setScrolled(window.scrollY > 50);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
+    return () => {
+      
+      document.body.classList.remove('menu-open');
+    };
+  }, [menuOpen]);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
@@ -62,6 +75,7 @@ function Header() {
           </li>
 
           <li><Link href="/news/blog">Salud y Bienestar</Link></li>
+          <li><Link href="https://pagos.segurossura.com.co/pagos" target="_blank" rel="noopener noreferrer">Pago Express</Link></li>
           <li><Link href="/contact">Contáctame</Link></li>
         </ul>
       </nav>

@@ -1,6 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
-import HeroAbout from '@/components/layout/AboutSection/HeroAbout';
+import HeroHome from '@/components/layout/HeroSection/HeroHome';
 
 function AboutPage() {
   return (
@@ -12,7 +12,7 @@ function AboutPage() {
           description='Perfil profesional de la asesora Mile Toro'
           />
           </Head>
-      <HeroAbout 
+      <HeroHome 
       title="Mile Toro, tu asesora de soluciones de seguros"
       description="Porque cuidar lo que más quieres no debería ser complicado.Soy asesora de seguros y estoy para acompañarte con empatía, claridad y el respaldo de la mano de la compañía que cumple cuando más lo necesitás.solo dime qué te preocupa, y construimos juntos la mejor solución. 💙"
        imageUrl="/Imagenperfil.jpeg"
