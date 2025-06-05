@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from './Header.module.scss';
+import Image from 'next/image'; 
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +31,12 @@ function Header() {
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
 <div className={styles.brand}>
         <div onClick={() => setShowModal(true)} style={{ cursor: 'pointer' }}>
-          <img src="/Logo.jpeg" alt="Logo asesora Milena Toro" />
+          <Image 
+            src="/Logo.jpeg" 
+            alt="Logo asesora Milena Toro" 
+            width={120} 
+            height={120} 
+  />
         </div>
       </div>
 

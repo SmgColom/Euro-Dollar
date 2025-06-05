@@ -1,4 +1,5 @@
 import styles from './HeroHome.module.scss';
+import Image from 'next/image'; 
 
 
 function HeroSplitSection({ title, description,imageUrl }) {
@@ -10,7 +11,12 @@ function HeroSplitSection({ title, description,imageUrl }) {
         <p>{description}</p>
       </div>
       <div className={styles.imageSide}>
-      <img src={imageUrl} alt={title} />
+      <Image 
+          src={imageUrl} 
+          alt={"Imagen tigre Suramericana"} 
+          width={500} 
+          height={300} 
+        />
       </div>
     </section>
   );

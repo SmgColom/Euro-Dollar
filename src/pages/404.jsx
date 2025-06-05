@@ -1,19 +1,26 @@
 // CUSTOM 404 PAGE
 import Link from "next/link"
+import { Fragment } from 'react';
+
+import HeroHome from '@/components/layout/HeroSection/HeroHome';
 
 function NotFoundPage() {
   return (
-    <div>
-      <h1>Welcome to Custom 404</h1>
-      <p>You are in the wrong place!</p>
-      <ul>     
-        {/* 3E: Return to Home Navigation */}
-        <li>
-          <Link href="/">Return to Home</Link>
-        </li>
-      </ul>
-    </div>
+    <Fragment>
+      <HeroHome 
+      title="Hmm..."
+      description="Página no encontrada, por favor vuelve al inicio "
+       imageUrl="/Notfound.jpg" 
+      />
+<div style={{ textAlign: 'center' }}>
+  <Link href="/" style={{ color: '#232f45' }}>
+    Volver a inicio
+  </Link>
+</div>
+    </Fragment>
+    
   )
 }
+
 
 export default NotFoundPage
