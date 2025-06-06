@@ -65,10 +65,10 @@ function Header() {
           <li><Link href="/about" onClick={() => setMenuOpen(false)}>Quien Soy Yo</Link></li>
 
           <li className={styles.dropdown}>
-            <a>Soluciones</a>
+            <span>Soluciones</span>
             <ul className={styles.dropdownMenu}>
               <li className={styles.submenu}>
-                <a>Para personas</a>
+                <span>Para personas</span>
                 <ul className={styles.submenuList}>
                   <li><Link href="/soluciones/vida" onClick={() => setMenuOpen(false)}>Vida Individual</Link></li>
                   <li><Link href="/soluciones/salud" onClick={() => setMenuOpen(false)}>Salud Familiar</Link></li>
@@ -77,7 +77,7 @@ function Header() {
                 </ul>
               </li>
               <li className={styles.submenu}>
-                <a>Para empresas</a>
+                <span>Para empresas</span>
                 <ul className={styles.submenuList}>
                   <li><Link href="/soluciones/multiriesgo" onClick={() => setMenuOpen(false)}>Multiriesgo Empresarial</Link></li>
                   <li><Link href="/soluciones/responsabilidad" onClick={() => setMenuOpen(false)}>Responsabilidad Civil</Link></li>

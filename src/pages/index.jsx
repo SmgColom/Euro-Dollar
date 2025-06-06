@@ -9,7 +9,7 @@ function HomePage() {
         <title>SegurosMileToro | Home</title>
         <meta 
           name='description'
-          description='Aquí encuentras las soluciones de seguros a tu medida con el mejor respaldo de Sura'
+          content='Aquí encuentras las soluciones de seguros a tu medida con el mejor respaldo de Sura'
           />
 
                   {/* Meta etiquetas Open Graph (SEO y redes sociales) */}

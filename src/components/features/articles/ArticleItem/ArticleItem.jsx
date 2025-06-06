@@ -53,7 +53,7 @@ function ArticleItem(props) {
         }
       </div>
     </Card>
-  );
+  );  
 }
 
 export default ArticleItem;

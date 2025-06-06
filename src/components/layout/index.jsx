@@ -10,7 +10,7 @@ function Layout(props) {
       <Header />
       <main className={styles.main}>
         {props.children}
-      </main>
+      </main> 
       <Footer />
     </div>
   );

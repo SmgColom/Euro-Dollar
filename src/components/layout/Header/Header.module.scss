@@ -37,7 +37,7 @@
         position: relative;
         margin-left: 3rem;
 
-        a {
+        span, a  {
           font-size: 1.2em;
           font-weight: 400;
           letter-spacing: 1px;
@@ -66,7 +66,7 @@
             margin: 0.5rem 0;
             position: relative;
 
-            a {
+            span, a {
               color: white;
 
               &:hover {
@@ -164,7 +164,7 @@
       cursor: pointer;
       z-index: 11;
 
-      span {
+      span, a {
         height: 3px;
         width: 100%;
         background: $complementaryColor;
@@ -192,7 +192,7 @@
           margin: 1rem 0;
           text-align: left;
 
-          a {
+          span, a {
             width: 100%;
             display: block;
             padding: 0.5rem 0;
@@ -207,7 +207,7 @@
             li {
               margin: 0.5rem 0;
 
-              a {
+              span, a {
                 color: $complementaryColor;
 
                 &:hover {
@@ -221,7 +221,7 @@
                 padding-left: 1rem;
                 flex-direction: column;
 
-                a {
+                span, a{
                   color: #f8f9fa;
 
                   &:hover {

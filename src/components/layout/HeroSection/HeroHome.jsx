@@ -13,7 +13,7 @@ function HeroSplitSection({ title, description,imageUrl }) {
       <div className={styles.imageSide}>
       <Image 
           src={imageUrl} 
-          alt={"Imagen tigre Suramericana"} 
+          alt={title} 
           width={500} 
           height={300} 
         />
