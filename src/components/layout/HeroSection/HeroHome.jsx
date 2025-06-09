@@ -1,9 +1,13 @@
 import styles from './HeroHome.module.scss';
-import Image from 'next/image'; 
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';  
+import Button from '@/components/common/Button';
 
 
 function HeroSplitSection({ title, description,imageUrl }) {
+  const router = useRouter();
   return (
+    <>
     <section className={styles.heroSplit}>
       <div className={styles.textContent}>
         
@@ -17,8 +21,15 @@ function HeroSplitSection({ title, description,imageUrl }) {
           width={500} 
           height={300} 
         />
-      </div>
+      </div>  
     </section>
+
+    <div className={styles.button}>
+      <Button  onClick={() => router.push('/contact')}>
+      Contáctame
+      </Button>
+    </div>
+    </>
   );
 }
 

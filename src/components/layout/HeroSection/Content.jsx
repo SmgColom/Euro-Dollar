@@ -32,7 +32,7 @@ function Content({
         </div>
         
         </div>
-        <div style={{ textAlign: 'center', marginTop: '20px', marginBottom: '20px' }}>
+        <div style={{ textAlign: 'left', marginTop: '20px', marginBottom: '20px', paddingLeft: '2rem' }}>
           <Button className={styles.button} onClick={() => router.push('/contact')}>
             Contáctame
           </Button>
