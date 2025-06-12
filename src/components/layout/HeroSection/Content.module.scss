@@ -3,17 +3,17 @@
 
 
   .text {
-    display: flex;
+    
     flex-direction: column;
     align-items: left;
     padding: 0rem 2rem ;
     justify-content: center;
-    margin: 2em auto;
+    margin: 1rem auto;
     
 
   p {
     align-items: left;
-    margin: 0.1rem;
+    margin: 0rem;
     font-size: 1.2em;
     color: $complementaryColor;
   }
@@ -23,7 +23,7 @@
 @media (max-width: 1024px) {
 
   .text {
-    margin-top:30px;
+    margin-top:10px;
   }
 
 }
@@ -33,7 +33,7 @@
 @media (max-width: 768px) {
 
   .text {
-    margin-top:30px;
+    margin-top:10px;
   }
 
 }

@@ -48,8 +48,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={styles.contact__formInnerWrapper}>
-      <form className={styles.contact__form} onSubmit={handleSubmit}>
+    <div className={styles.infoWrapper}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <input name="Nombre" placeholder="Nombre" value={formData.Nombre} onChange={handleChange} />
         {errors.Nombre && <small>{errors.Nombre}</small>}
 

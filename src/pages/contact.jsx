@@ -3,18 +3,23 @@ import ContactInfo from '@/components/layout/ContactSection/ContactInfo';
 import styles from '@/components/layout/ContactSection/ContactForm.module.scss';
 
 const ContactPage = () => (
-  <div className={styles.contact__wrapper}>
+
+  <>
+  <h1 className={styles.title}><span>Contáctame</span></h1>
+  <div className={styles.Wrapper}>
+      
     {/* Columna izquierda: Título + Formulario */}
-    <div className={styles.contact__column}>
-      <h1 className={styles.contact__title}><span>Contáctame</span></h1>
+    <div className={styles.column}>
+    
       <ContactForm />
     </div>
 
     {/* Columna derecha: Info */}
-    <div className={styles.contact__infoWrapper}>
+    <div className={styles.infoWrapper}>
       <ContactInfo />
     </div>
   </div>
+  </>
 );
 
 export default ContactPage;
