@@ -45,11 +45,11 @@
 
       // Enviar a Google Forms
 const formDataToSend = new FormData();
-formDataToSend.append("entry.399147502", formData.Nombre);
-formDataToSend.append("entry.1038662462", formData.Apellido);
-formDataToSend.append("entry.1852247219", formData.Celular);
-formDataToSend.append("entry.1300937957", formData.email);
-formDataToSend.append("entry.304608279", formData.Mensaje);
+formDataToSend.append("entry.2137210133", formData.Nombre);
+formDataToSend.append("entry.85802793", formData.Apellido);
+formDataToSend.append("entry.1410648333", formData.Celular);
+formDataToSend.append("entry.967153321", formData.email);
+formDataToSend.append("entry.896293727", formData.Mensaje);
      // Reemplaza la URL con la de tu formulario (vista pública)
 fetch("https://docs.google.com/forms/d/e/1FAIpQLSflq8LwsEpjMXZxpXzWzJqTC3BQSiJLKxA_shtjebM87QPiCA/formResponse", {
   method: "POST",
