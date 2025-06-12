@@ -26,7 +26,7 @@ function HeroSplitSection({ title, description,imageUrl }) {
 
     <div className={styles.button}>
       <Button  onClick={() => router.push('/contact')}>
-      Contáctame
+      Conversemos
       </Button>
     </div>
     </>

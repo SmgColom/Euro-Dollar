@@ -41,6 +41,7 @@ function App({ Component, pageProps }) {
       </Script>
 
       <Head>
+      <meta name="google-site-verification" content="CrzBLjCsCb_XieIj02F3s_rKQckw1GkCbUP_EsBQfqQ" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
       </Head>
       <Layout>
