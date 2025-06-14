@@ -10,9 +10,6 @@
     return (
       <Fragment>
 
-jsx
-Copiar
-Editar
 <Head>
   <title>Salud y Bienestar | Seguros Mile Toro</title>
   <meta 
