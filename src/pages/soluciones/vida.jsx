@@ -9,11 +9,20 @@ function VidaPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|Vida</title>
-        <meta 
+       <title>Seguro de Vida | Protección familiar con Mile Toro y Sura</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros de Vida con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Protege a quienes más amas con el Seguro de Vida de Sura. Asesoría personalizada de Mile Toro para tu tranquilidad y la de tu familia.'
+        />
+          <meta property="og:title" content="Seguro de Vida | Protección familiar con Mile Toro y Sura" />
+          <meta property="og:description" content="Protege a quienes más amas con el Seguro de Vida de Sura. Asesoría personalizada de Mile Toro para tu tranquilidad y la de tu familia." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/vida.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/vida" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro de Vida | Protección familiar con Mile Toro y Sura" />
+          <meta name="twitter:description" content="Protege a quienes más amas con el Seguro de Vida de Sura. Asesoría personalizada de Mile Toro para tu tranquilidad y la de tu familia." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/vida.jpeg" />
           </Head>
       <HeroSection 
       title="Vida Individual"

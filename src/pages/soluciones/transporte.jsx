@@ -9,11 +9,20 @@ function TransportePage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|Transporte</title>
-        <meta 
+       <title>Seguro de Transporte | Protege tus mercancías con Mile Toro y Sura</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros de Transporte con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Asegura tus cargas y vehículos con el respaldo de Sura. Protección para transportes terrestres, aéreos o marítimos, con asesoría experta de Mile Toro.'
+        />
+          <meta property="og:title" content="Seguro de Transporte | Protege tus mercancías con Mile Toro y Sura" />
+          <meta property="og:description" content="Asegura tus cargas y vehículos con el respaldo de Sura. Protección para transportes terrestres, aéreos o marítimos, con asesoría experta de Mile Toro." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/transporte" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro de Transporte | Protege tus mercancías con Mile Toro y Sura" />
+          <meta name="twitter:description" content="Asegura tus cargas y vehículos con el respaldo de Sura. Protección para transportes terrestres, aéreos o marítimos, con asesoría experta de Mile Toro." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
           </Head>
       <HeroSection 
       title="Transporte de mercancias"

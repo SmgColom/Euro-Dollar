@@ -9,11 +9,20 @@ function ResponsabilidadPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|RC</title>
-        <meta 
+       <title>Seguro de Responsabilidad Civil | Protege tu Patrimonio con Mile Toro y Sura</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros de Responsabilidad Civil con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Evita pérdidas económicas por daños a terceros con el seguro de responsabilidad civil de Mile Toro y Sura. Asesoría experta y cobertura completa.'
+        />
+          <meta property="og:title" content="Seguro de Responsabilidad Civil | Protege tu Patrimonio con Mile Toro y Sura" />
+          <meta property="og:description" content="Evita pérdidas económicas por daños a terceros con el seguro de responsabilidad civil de Mile Toro y Sura. Asesoría experta y cobertura completa." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/responsabilidad" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro de Responsabilidad Civil | Protege tu Patrimonio con Mile Toro y Sura" />
+          <meta name="twitter:description" content="Evita pérdidas económicas por daños a terceros con el seguro de responsabilidad civil de Mile Toro y Sura. Asesoría experta y cobertura completa." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
           </Head>
       <HeroSection 
       title="Responsabilidad Civil"

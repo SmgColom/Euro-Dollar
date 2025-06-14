@@ -9,11 +9,20 @@ function HogarPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|Hogar</title>
-        <meta 
+       <title>Seguro de Hogar | Protege tu Vivienda con Sura y Mile Toro</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros de Hogar con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Protege tu vivienda, tus bienes y a tu familia con seguros de hogar respaldados por Sura y asesoría personalizada de Mile Toro.'
+        />
+          <meta property="og:title" content="Seguro de Hogar | Protege tu Vivienda con Sura y Mile Toro" />
+            <meta property="og:description" content="Protege tu vivienda, tus bienes y a tu familia con seguros de hogar respaldados por Sura y asesoría personalizada de Mile Toro." />
+            <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/hogar.jpeg" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/hogar" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Seguro de Hogar | Protege tu Vivienda con Sura y Mile Toro" />
+            <meta name="twitter:description" content="Protege tu vivienda, tus bienes y a tu familia con seguros de hogar respaldados por Sura y asesoría personalizada de Mile Toro." />
+            <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/hogar.jpeg" />
           </Head>
       <HeroSection 
       title="Hogar"

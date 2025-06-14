@@ -6,18 +6,22 @@ function HomePage() {
   return (
     <Fragment>
        <Head>
-        <title>SegurosMileToro | Home</title>
-        <meta 
-          name='description'
-          content='Aquí encuentras las soluciones de seguros a tu medida con el mejor respaldo de Sura'
-          />
+        <title>Seguros Mile Toro | Home</title>
+        <meta
+          name="description"
+          content="Soluciones de seguros personalizadas con el respaldo de Sura y la asesoría de Mile Toro."
+        />
+           <meta property="og:title" content="Seguros Mile Toro | Home" />
+  <meta property="og:description" content="Encuentra soluciones de seguros a tu medida con el respaldo de Sura y el acompañamiento de Mile Toro." />
+  <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/Logo.jpeg" />
+  <meta property="og:url" content="https://miletoroseguros.vercel.app/" />
+  <meta property="og:type" content="website" />
 
-                  {/* Meta etiquetas Open Graph (SEO y redes sociales) */}
-        <meta property="og:title" content="SegurosMileToro | Home" />
-        <meta property="og:description" content="Aquí encuentras las mejores soluciones de seguros con el respaldo de Sura." />
-        <meta property="og:image" content="https://miletoroseguros.vercel.app/tigre.jpg" />
-        <meta property="og:url" content="https://miletoroseguros.vercel.app/" />
-        <meta property="og:type" content="website" />
+  {/* Meta adicional para Twitter (opcional, pero recomendado) */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seguros Mile Toro | Home" />
+  <meta name="twitter:description" content="Soluciones de seguros a tu medida con el respaldo de Sura y el acompañamiento de Mile Toro." />
+  <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/Logo.jpeg" />
           </Head>
       <HeroHome 
       title="Protección personal y patrimonial para toda la familia"

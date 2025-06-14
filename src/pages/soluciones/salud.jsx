@@ -9,11 +9,20 @@ function SaludPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|Salud</title>
-        <meta 
+       <title>Seguro de Salud | Protege tu Bienestar con Mile Toro y Sura</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros de Salud con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Cuida tu salud y la de tu familia con los seguros médicos de Mile Toro y Sura. Cobertura completa y asesoría personalizada para tu tranquilidad.'
+        />
+          <meta property="og:title" content="Seguro de Salud | Protege tu Bienestar con Mile Toro y Sura" />
+          <meta property="og:description" content="Cuida tu salud y la de tu familia con los seguros médicos de Mile Toro y Sura. Cobertura completa y asesoría personalizada para tu tranquilidad." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/salud.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/salud" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro de Salud | Protege tu Bienestar con Mile Toro y Sura" />
+          <meta name="twitter:description" content="Cuida tu salud y la de tu familia con los seguros médicos de Mile Toro y Sura. Cobertura completa y asesoría personalizada para tu tranquilidad." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/salud.jpeg" />
           </Head>
       <HeroSection 
       title="Salud Familiar"

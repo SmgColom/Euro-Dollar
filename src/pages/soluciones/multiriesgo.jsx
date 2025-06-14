@@ -9,11 +9,20 @@ function MultiriesgoPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|Multiriesgo</title>
-        <meta 
+       <title>Seguro Multiriesgo Empresarial – Protección Total con Mile Toro y Sura</title>
+       <meta 
           name='description'
-          content='Descripción de la oferta de seguros Multiriesgo con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+          content='Protege tu empresa o negocio con el seguro multiriesgo de Sura y Mile Toro. Cobertura contra incendios, robos, desastres y más.'
+        />
+          <meta property="og:title" content="Seguro Multiriesgo Empresarial – Protección Total con Mile Toro y Sura" />
+          <meta property="og:description" content="Protege tu empresa o negocio con el seguro multiriesgo de Sura y Mile Toro. Cobertura contra incendios, robos, desastres y más." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/multiriesgo" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro Multiriesgo Empresarial – Protección Total con Mile Toro y Sura" />
+          <meta name="twitter:description" content="Protege tu empresa o negocio con el seguro multiriesgo de Sura y Mile Toro. Cobertura contra incendios, robos, desastres y más." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
           </Head>
       <HeroSection 
       title="Multiriesgo Empresarial"

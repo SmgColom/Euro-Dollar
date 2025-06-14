@@ -9,11 +9,20 @@ function ArlPage() {
   return (
     <Fragment>
        <Head>
-       <title>Seguros Mile Toro|ARL</title>
-        <meta 
-          name='description'
-          content='Descripción de la oferta ARL con el respaldo de Sura y la asesoría de Mile Toro'
-          />
+       <title>Afiliación ARL Sura | Protección Laboral con Mile Toro</title>
+       <meta 
+        name='description'
+        content='Afíliate a la ARL Sura con asesoría de Mile Toro. Protege a tus empleados con cobertura de riesgos laborales y respaldo especializado.'
+      />
+        <meta property="og:title" content="Afiliación ARL Sura – Protección Laboral con Mile Toro" />
+        <meta property="og:description" content="Afíliate a la ARL Sura con asesoría de Mile Toro. Protege a tus empleados con cobertura de riesgos laborales y respaldo especializado." />
+        <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/arl" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Afiliación ARL Sura | Protección Laboral con Mile Toro" />
+        <meta name="twitter:description" content="Afíliate a la ARL Sura con asesoría de Mile Toro. Protege a tus empleados con cobertura de riesgos laborales y respaldo especializado." />
+        <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
           </Head>
       <HeroSection 
       title="ARL Sura"

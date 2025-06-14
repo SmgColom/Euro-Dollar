@@ -9,12 +9,21 @@ function AgroPage() {
   return (
     <Fragment>
        <Head>
-        <title>Seguros Mile Toro|Agro</title>
+        <title>Seguros de Agro|Seguros Mile Toro</title>
         <meta 
-          name='description'
-          content='Descripción de la oferta de seguros de Agro con el respaldo de Sura y la asesoría de Mile Toro'
-          />
-          </Head>
+    name='description'
+    content='Protege tu actividad agropecuaria con Seguros Sura. Asesoría personalizada con Mile Toro y respaldo confiable para el sector agrícola.'
+  />
+  <meta property="og:title" content="Seguros de Agro|Seguros Mile Toro" />
+  <meta property="og:description" content="Protege tu actividad agropecuaria con seguros Sura. Asesoría personalizada con Mile Toro y respaldo confiable para el sector agrícola." />
+  <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/agro" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seguros de Agro|Seguros Mile Toro" />
+  <meta name="twitter:description" content="Protege tu actividad agropecuaria con seguros Sura. Asesoría personalizada con Mile Toro y respaldo confiable para el sector agrícola." />
+  <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/empresariales.jpeg" />
+</Head>
       <HeroSection 
       title="Agro"
       description="Protege tu empresa, impulsa tu tranquilidad"

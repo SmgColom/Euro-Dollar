@@ -9,11 +9,20 @@ function MovilidadPage() {
   return (
     <Fragment>
        <Head>
-        <title>SegurosMileToro|Movilidad</title>
-        <meta 
-          name='Seguros de Movilidad asesora Mile Toro'
-          description='Descripción de la oferta del seguro de Movilidad con el respaldo de Sura y la asesora Mile Toro'
-          />
+       <title>Seguro para Carros | Protección Total con Sura y Mile Toro</title>
+       <meta 
+          name='description'
+          content='Conduce tranquilo con el seguro para carros de Sura y Mile Toro. Protección contra daños, robos y accidentes con asesoría personalizada.'
+        />
+          <meta property="og:title" content="Seguro para Carros | Protección Total con Sura y Mile Toro" />
+          <meta property="og:description" content="Conduce tranquilo con el seguro para carros de Sura y Mile Toro. Protección contra daños, robos y accidentes con asesoría personalizada." />
+          <meta property="og:image" content="https://miletoroseguros.vercel.app/public/backgrounds/movilidad.jpeg" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://miletoroseguros.vercel.app/soluciones/movilidad" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Seguro para Carros | Protección Total con Sura y Mile Toro" />
+          <meta name="twitter:description" content="Conduce tranquilo con el seguro para carros de Sura y Mile Toro. Protección contra daños, robos y accidentes con asesoría personalizada." />
+          <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/movilidad.jpeg" />
           </Head>
       <HeroSection 
       title="Movilidad"
