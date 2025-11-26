@@ -24,7 +24,7 @@ function HomePage() {
   <meta name="twitter:image" content="https://miletoroseguros.vercel.app/public/backgrounds/Logo.jpeg" />
           </Head>
       <HeroHome 
-      title="Protección personal y patrimonial para toda la familia"
+      title="Nuestras Tasas"
       description="Después de conocernos e identificar juntos tus necesidades, construyamos las mejores soluciones de seguros a la medida para ti, tu familia, tu patrimonio y tu futuro,con el respaldo de la compañía líder del mercado, Seguros Sura"
        imageUrl="/tigre.jpg" alt={"Imagen tigre Suramericana"}
       />
