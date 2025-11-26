@@ -1,48 +1,172 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
+/* HERO WRAPPER */
+.heroWrapper {
+  
+  background: #1d3e7d;
+  padding: 4rem 0 0rem 0;
+  overflow: hidden;
+}
 
-  .text {
-    
+/* CONTENEDOR PRINCIPAL */
+.heroContent {
+  max-width: 1500px;        
+  margin: 0 auto;           
+  padding: 0 2rem 0 2rem;          
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+
+  @media (min-width: 1024px) {
+    flex-wrap: nowrap;  
+  }
+
+  @media (max-width: 900px) {
     flex-direction: column;
-    align-items: left;
-    padding: 0rem 2rem ;
-    justify-content: center;
-    margin: 1rem auto;
-    
-
-  p {
-    align-items: left;
-    margin: 0rem;
-    font-size: 1.2em;
-    color: $complementaryColor;
+    text-align: center;
   }
 }
 
+/* LEFT CARD */
+.leftCard {
+  
+  background: white;
+  color: #1d3e7d;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 25px;
+  width: 40%;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
 
-@media (max-width: 1024px) {
-
-  .text {
-    margin-top:10px;
+  @media (max-width: 900px) {
+    width: 100%;
   }
 
-}
-
-
-
-@media (max-width: 768px) {
-
-  .text {
-    margin-top:10px;
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
-
 }
 
+/* TABLA DE TASAS */ 
 
+.ratesTable { 
+  
+  width: 100%; 
+  display: grid; 
+  gap: 1rem; 
+}
 
+/* Encabezados: Compra / Venta */ 
 
+.gridHeader { 
+  display: grid; 
+  grid-template-columns: 1.5fr 1fr 1fr; 
+  
+  /* MISMO GRID QUE LAS FILAS */ 
+  text-align: center; 
+  font-weight: bold; 
+  margin-bottom: 1rem; 
+} 
 
+.headerItem { 
+  font-size: 1.2rem; 
+} 
 
+/* FILA DE TASA */ 
+.rateRow { 
+  display: grid; 
+  grid-template-columns: 1.5fr 1fr 1fr; 
+  
+  /* ICONO+MONEDA | COMPRA | VENTA */ 
+  align-items: center; 
+  text-align: center; 
+  gap: 1rem; strong { font-size: 1.4rem; } 
+  span { font-size: 1.4rem; font-weight: 600; } 
+} 
 
+/* ICONO + NOMBRE */ 
+.iconAndName {
+   display: flex; 
+   align-items: center; 
+   gap: 1rem; 
+   strong { font-size: 1.5rem; } 
+  } 
+  /* ICONO REDONDO */ 
+  .circleIcon { 
+    width: 55px; 
+    height: 55px; 
+    border-radius: 50%; 
+    border: 3px solid #1d3e7d; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    img { width: 100%; height: 100%; object-fit: cover; } 
+    } 
+    /* WARNING BOX */ 
+    .warningBox { 
+      font-size: 0.9rem; 
+      margin-top: 1.5rem; 
+      line-height: 1.4; 
+      color: #1d3e7d; 
+    } 
+    /* RIGHT CONTENT */ 
+    .rightContent { 
+      
+      max-width: 480px; 
+      margin-left: auto;
+      margin-right: 0; 
+      align-items: center;
+       
+      
+      @media (max-width: 900px) { 
+        width: 100%; } 
+        
+    h3 {
+    text-align: center;
+    padding-top: 10px; 
+    font-size: 1.4rem; 
+    font-weight: 700; } 
+          
+    h1 { 
+    text-align: center;
+    font-size: 2.3rem; 
+    color: #ffcd33; } 
+            
+    p { 
+    width: 100%; 
+    line-height: 1.6; 
+    font-size: 1.3rem;
+    text-align: right; 
+              
+    @media (max-width: 900px) 
+    { max-width: 100%; } } } 
+    /* BOTÓN WHATSAPP */ 
+              
+    .whatsappBtn {
+    margin-top: 2rem;
+    margin-left: 7.5rem;
+    display: inline-flex; 
+    align-items: center; 
+    background: white; 
+    padding: 0.8rem 1.4rem; 
+    border-radius: 50px; 
+    color: #1d3e7d; 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    text-decoration: none; 
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); 
+    transition: 0.2s; &:hover { transform: scale(1.05); } 
+    img { width: 32px; margin-right: 0.8rem; } } 
 
-
+    /* CURVA INFERIOR */ 
+    .curveBottom { 
+     width: 100%; 
+     height: 200px; 
+    background: url("/curve-bottom.svg") no-repeat bottom center; 
+    background-size: 100% 100%;
+    margin-top: 0px; z-index: 0; 
+    }

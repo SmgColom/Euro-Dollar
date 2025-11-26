@@ -15,12 +15,7 @@ function HeroSplitSection({ title, description,imageUrl }) {
         <p>{description}</p>
       </div>
       <div className={styles.imageSide}>
-      <Image 
-          src={imageUrl} 
-          alt={title} 
-          width={500} 
-          height={300} 
-        />
+
       </div>  
     </section>
 
