@@ -11,7 +11,6 @@ module.exports = (phase) => {
 
   const reactStrictMode = true;
 
-  // UNCONFIGURED HOST + REMOTE PATTERNS: https://nextjs.org/docs/pages/api-reference/components/image#remotepatterns
   const images = {
     remotePatterns: [
       {
@@ -44,16 +43,17 @@ module.exports = (phase) => {
     })(),
     NEWS_API_KEY: process.env.NEWS_API_KEY,
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
-
     MONGO_ATLAS_CONNECTION_URI: process.env.MONGO_ATLAS_URI,
-
-    
   } 
 
-  // Next.config returns an object
+  // 🔥 HERE: disable the App Router completely
   return {
     reactStrictMode,
     images,
     env,
+    experimental: {
+      appDir: false,   // 👈 ESTO ES LO QUE SOLUCIONA TU ERROR EMFILE
+    },
   }
 }
+

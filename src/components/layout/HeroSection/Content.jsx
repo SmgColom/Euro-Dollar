@@ -1,49 +1,56 @@
-import styles from './Content.module.scss';
+import styles from "./Content.module.scss";
 import Image from "next/image";
-const Hero = () => {
+
+const Hero = ({ rates = [] }) => {
+  const euro = rates.find((r) => r.moneda?.trim().toLowerCase() === "euro");
+  const dolar = rates.find((r) => r.moneda?.trim().toLowerCase() === "dolar");
+
   return (
     <section className={styles.heroWrapper}>
       <div className={styles.heroContent}>
+
         {/* LEFT CARD */}
         <div className={styles.leftCard}>
-        <h2>Nuestras Tasa</h2>
+          <h2>Nuestras Tasa</h2>
+
           <div className={styles.ratesTable}>
-          {/* Subtítulos */}
-          <div className={styles.gridHeader}>
-              <div></div> {/* espacio vacío para icono/moneda */}
-              <div className={styles.headerItem}>Compra<br />(We Buy)</div>
-              <div className={styles.headerItem}>Venta<br />(We Sell)</div>
-          </div>
-
-          {/* EURO */}
-          <div className={styles.rateRow}>
-            <div className={styles.iconAndName}>
-              <div className={styles.circleIcon}>
-              <Image src="/eu.svg" alt="Euro" width={55} height={55} />
+            {/* Subtítulos */}
+            <div className={styles.gridHeader}>
+              <div></div>
+              <div className={styles.headerItem}>
+                Compra<br />(We Buy)
               </div>
-              <strong>Euro</strong>
+              <div className={styles.headerItem}>
+                Venta<br />(We Sell)
+              </div>
             </div>
-            <span>$ 3.307</span>
-            <span>$ 3.307</span>
-  </div>
 
-          {/* DÓLAR */}
-          <div className={styles.rateRow}>
-          <div className={styles.iconAndName}>
-            <div className={styles.circleIcon}>
-        <Image src="/us.svg" alt="USD" width={55} height={55} />
-      </div>
-      <strong>Dólar</strong>
-    </div>
-    <span>$ 3.307</span>
-    <span>$ 3.307</span>
-  </div>
+            {/* EURO */}
+            <div className={styles.rateRow}>
+              <div className={styles.iconAndName}>
+                <div className={styles.circleIcon}>
+                  <Image src="/eu.svg" alt="Euro" width={55} height={55} />
+                </div>
+                <strong>Euro</strong>
+              </div>
 
-</div><div className={styles.ratesTable}>
+              <span>${euro?.compra ?? ""}</span>
+              <span>${euro?.venta ?? ""}</span>
+            </div>
 
-  
+            {/* DÓLAR */}
+            <div className={styles.rateRow}>
+              <div className={styles.iconAndName}>
+                <div className={styles.circleIcon}>
+                  <Image src="/us.svg" alt="USD" width={55} height={55} />
+                </div>
+                <strong>Dólar</strong>
+              </div>
 
-</div>
+              <span>${dolar?.compra ?? ""}</span>
+              <span>${dolar?.venta ?? ""}</span>
+            </div>
+          </div>
 
           <p className={styles.warningBox}>
             ¡El mercado se mueve rápido! Las tasas mostradas son de referencia.
@@ -56,7 +63,7 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT SIDE (restaurado) */}
         <div className={styles.rightContent}>
           <h3>RÁPIDO Y SEGURO</h3>
           <h1>¿Cansado de Buscar?</h1>
@@ -79,12 +86,15 @@ const Hero = () => {
         </div>
 
       </div>
+
       {/* CURVA INFERIOR */}
       <div className={styles.curveBottom}></div>
-
     </section>
   );
 };
 
+export default Hero;
 
-export default Hero; 
+
+
+
