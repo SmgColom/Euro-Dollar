@@ -11,7 +11,11 @@ function Footer() {
       
       <div className={styles.logoSection}>
         <div className={styles.logo}>
-          <img src="/Logo_Blanco.jpeg" alt="Logo EuroDollar" />
+          <img src="/Logo_Blanco.png" 
+          alt="Logo EuroDollar"   
+          width={300}    
+          height={300}
+          />
         </div>
       </div>
 

@@ -7,6 +7,7 @@ import Layout from '@/components/layout';
 import * as ga from '../lib/google-analytics';
 import Calculator from '@/components/layout/HeroSection/Calculator';
 import Quienes_Somos from '@/components/layout/HeroSection/Quienes_Somos';
+import Visitanos from '@/components/layout/HeroSection/Visitanos';
 
 function App({ Component, pageProps }) {
   const router = useRouter();
@@ -47,6 +48,7 @@ function App({ Component, pageProps }) {
         <Component {...pageProps} />
         <Calculator rates={pageProps.rates || []} />
         <Quienes_Somos />
+        <Visitanos />
       </Layout>
     </Fragment>
   );
