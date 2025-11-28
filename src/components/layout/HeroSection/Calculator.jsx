@@ -51,7 +51,7 @@ const Calculator = ({ rates = [] }) => {
       <div className={styles.container}>
 
         {/* LEFT SIDE */}
-        <div className={styles.leftColumn}>
+        <div className={styles.Izquierda}>
 
           <div className={styles.featureItem}>
             <Image 
@@ -91,7 +91,7 @@ const Calculator = ({ rates = [] }) => {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className={styles.card}>
+        <div className={styles.Derecha}>
 
           {/* TENGO */}
           <div className={styles.row}>

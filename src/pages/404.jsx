@@ -3,11 +3,10 @@ import Link from "next/link"
 import { Fragment } from 'react';
 
 
-
 function NotFoundPage() {
   return (
     <Fragment>
-      <HeroHome 
+      <Content 
       title="Hmm..."
       description="Página no encontrada, por favor vuelve al inicio "
        imageUrl="/Notfound.jpg" 
