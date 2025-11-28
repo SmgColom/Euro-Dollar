@@ -1,6 +1,7 @@
 import { google } from "googleapis";
 
 export async function getRates() {
+  // Autenticación con Google Service Account
   const auth = new google.auth.GoogleAuth({
     credentials: {
       client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
@@ -11,9 +12,10 @@ export async function getRates() {
 
   const sheets = google.sheets({ version: "v4", auth });
 
+  // Leer TODAS las divisas desde B3 hasta el final de la tabla
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: process.env.GOOGLE_SHEET_ID,
-    range: "'Tasas del dia'!B3:D4", // tu rango actual
+    range: "'Tasas del dia'!B3:D8", // lee columnas B, C, D dinámicamente
   });
 
   const rows = response.data.values;
@@ -22,17 +24,29 @@ export async function getRates() {
     throw new Error("No hay datos en Google Sheets");
   }
 
-  const limpiar = (v) =>
-    String(v || "")
-      .replace("$", "")
-      .replace(",", "")
+  // Función para limpiar valores tipo "$2.655,72"
+  const limpiar = (v) => {
+    if (!v) return 0;
+
+    const limpio = String(v)
+      .replace(/\$/g, "")      // quita el signo $
+      .replace(/\s/g, "")      // quita espacios
+      .replace(/\./g, "")      // quita puntos de miles
+      .replace(/,/g, ".")      // convierte coma decimal a punto
       .trim();
 
-  const data = rows.map((row) => ({
-    moneda: row[0],         // "Euro" / "Dolar"
-    compra: limpiar(row[1]),
-    venta: limpiar(row[2]),
-  }));
+    return Number(limpio);
+  };
+
+  // Convertir filas en objetos
+  const data = rows
+    .filter((row) => row[0]) // evitar filas en blanco
+    .map((row) => ({
+      moneda: row[0].trim().toLowerCase(), // estandarizamos para lógica interna
+      compra: limpiar(row[1]),
+      venta: limpiar(row[2]),
+    }));
 
   return data;
 }
+

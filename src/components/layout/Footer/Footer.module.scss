@@ -1,131 +1,48 @@
 @use '@/styles/scss/abstracts/' as *;
 
 .footerwrapper {
-  color:$complementaryColor;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:$complementaryColor;
   font-family: 'Poppins', sans-serif;
-  padding: 1rem 2rem 0rem 2rem;
+  padding: 1rem 2rem 1rem 2rem;
   max-width: 1500px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
-}
-.footerTop {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  gap: 3rem;
-  margin-right: 0rem;
-  margin-bottom: 2rem;
-  align-items: start;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-
-  @media (max-width: 430px) {
-    gap:0rem
-  }
-}
-
-.footerSection  {
-  h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-  }
-
-  a, p {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-    text-decoration: none;
-  }
+.logoSection{
+  align-items: self-start;
 
   .logo img {
-    justify-content: flex-end;
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
   }
+
 }
 
-
-.logoSection {
-  display: flex;
-  justify-content: flex-end; // Alineado a la derecha
-  width: 100%;
-  
-
-  @media (max-width: 1024px) {
-    grid-column: span 2;
-    margin-top: 1rem;
+  .copyright{
+    color:$primaryColor
   }
 
-  @media (max-width: 600px) {
-    grid-column: span 1;
-  }
-
-  @media (max-width: 430px) {
-    justify-content: flex-end;
-  }
-
-  .logo {
-    margin: 0 auto;
-    
-
-    img {
-      height: 6rem;
-      width: 6rem;
-      object-fit: fill;
-      border-radius: 25%;
-      align-items: right;
-    }
-
-    }
-  }
-
-  @media (max-width: 768px) {
-
-    .footerwrapper{
-      padding-left: 2rem;
-      
-    }
-  }
-
-.footerbottom {
-  background: $primaryColor;
-  border-top: 1px solid #ffffff;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-right:  0rem;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-
-
-  @media(min-width: 768px) {
-    
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  p{
-    color: $complementaryColor;
-    text-align: center;
-    
-  }
-
-  .socialIcons {
+  .socialIcons{
     display: flex;
-    gap: 1rem;
-  
+    margin-right: 30rem;
+    color: $primaryColor;
+    justify-content: space-between;
+
     a {
-      text-decoration: none;
+       margin:0.5rem;
+       align-items: center;
+
+    svg {
+        display: block;       // evita espacio interno de inline-svg
+        line-height: 1;       // iguala la caja visual
+        }
     }
   }
 
 }
-

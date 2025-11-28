@@ -1,0 +1,174 @@
+/* WRAPPER GENERAL */
+.calculatorWrapper {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* TÍTULO */
+.title {
+  font-size: 2rem;
+  color: #1d3e7d;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-start;   
+
+  padding: 0 6rem 2rem 1.8rem;
+  overflow: visible;
+}
+
+/* LEFT COLUMN */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-top: 0rem;
+}
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+
+.featureBox {
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d3e7d;
+}
+
+/* RIGHT CARD */
+.card {
+  height: max-content;
+  background: white;
+  padding-top: 2rem;            
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0rem;
+  border-radius: 2rem;
+  box-shadow: 12px 12px 0 rgba(0,0,0,0.1);
+  width: 45%;
+}
+
+
+.row {
+  display: flex;
+  justify-content: flex-start;  
+  align-items: center;         
+  gap: 1.5rem;                
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.actionBtn {
+  margin-right: 20px;
+  background-color: #1d3e7d;
+
+  width: 260px;
+  min-height: 60px;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border: none;
+  color: white;
+  border-radius: 2rem;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+
+  
+  white-space: normal;     
+  overflow: visible;       
+  text-overflow: unset;    
+  line-height: 1.2;        
+
+  z-index: 1;
+}
+
+
+/* RESULT (valor final) */
+.result {
+  font-size: 1.5rem;
+  color: #1d3e7d;
+  font-weight: 700;
+}
+
+/* ------------------------------ */
+/*   CASILLAS BLANCAS UNIFICADAS */
+/* ------------------------------ */
+
+/* SELECT BLANCO */
+.visibleSelect {
+  width: 260px;
+  height: 60px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d3e7d;
+
+  border: 2px solid #1d3e7d;
+  background: white;
+  border-radius: 1rem;
+
+  padding: 0 1rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+
+  display: flex;
+  align-items: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  z-index: 10;
+}
+
+/* INPUT BLANCO */
+.visibleInput {
+  width: 260px;
+  height: 60px;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1d3e7d;
+
+  border: 2px solid #1d3e7d;
+  background: white;
+  border-radius: 1rem;
+
+  padding: 0 1rem;
+  outline: none;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 10;
+}
+
+/* Compatibilidad (no tocar) */
+.selectWrapper { width: 220px; }
+.inputWrapper { width: 220px; }
+.invisibleSelect { display: none; }
+.invisibleInput { display: none; }
+
+
+
+
+

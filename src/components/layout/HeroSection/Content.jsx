@@ -1,9 +1,20 @@
 import styles from "./Content.module.scss";
 import Image from "next/image";
+import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 const Hero = ({ rates = [] }) => {
-  const euro = rates.find((r) => r.moneda?.trim().toLowerCase() === "euro");
-  const dolar = rates.find((r) => r.moneda?.trim().toLowerCase() === "dolar");
+
+  // Normalizar cualquier nombre de moneda (quita acentos, mayúsculas, plurales)
+  const normalize = (str) =>
+    str
+      ?.toString()
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); // remover acentos
+
+  // Encontrar Euro y Dólar robustamente
+  const euro = rates.find((r) => normalize(r.moneda).includes("euro"));
+  const dolar = rates.find((r) => normalize(r.moneda).includes("dolar"));
 
   return (
     <section className={styles.heroWrapper}>
@@ -52,18 +63,22 @@ const Hero = ({ rates = [] }) => {
             </div>
           </div>
 
-          <p className={styles.warningBox}>
-            ¡El mercado se mueve rápido! Las tasas mostradas son de referencia.
-            Asegura tu valor confirmándolo con nosotros antes de transaccionar.
-            <br />
-            <em>
-              "The market moves fast! Rates shown are for reference. Please lock in your value
-              by confirming with us just before your transaction."
-            </em>
-          </p>
+          <div className={styles.warningRow}>
+            <AiOutlineExclamationCircle className={styles.warningIcon} />
+            <div className={styles.warningBox}>
+              ¡El mercado se mueve rápido! Las tasas mostradas son de referencia.
+              Asegura tu valor confirmándolo con nosotros antes de transaccionar.
+              <br />
+              <em>
+                "The market moves fast! Rates shown are for reference. Please lock in your
+                value by confirming with us just before your transaction."
+              </em>
+            </div>
+          </div>
+
         </div>
 
-        {/* RIGHT SIDE (restaurado) */}
+        {/* RIGHT SIDE */}
         <div className={styles.rightContent}>
           <h3>RÁPIDO Y SEGURO</h3>
           <h1>¿Cansado de Buscar?</h1>
@@ -94,6 +109,7 @@ const Hero = ({ rates = [] }) => {
 };
 
 export default Hero;
+
 
 
 

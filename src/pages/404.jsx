@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { Fragment } from 'react';
 
-import HeroHome from '@/components/layout/HeroSection/HeroHome';
+
 
 function NotFoundPage() {
   return (

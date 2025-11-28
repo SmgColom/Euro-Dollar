@@ -3,7 +3,7 @@ import { getRates } from "@/lib/getRates";
 
 export async function getServerSideProps() {
   try {
-    const rates = await getRates();          // 👈 llama directo a Google Sheets
+    const rates = await getRates(); // ← obtiene divisas desde Google Sheets
     return { props: { rates } };
   } catch (error) {
     console.error("ERROR GOOGLE SHEETS (SSR):", error);
@@ -12,8 +12,18 @@ export async function getServerSideProps() {
 }
 
 export default function HomePage({ rates }) {
-  console.log("Rates en HomePage:", rates);  // 👈 para verificar en consola del server
-  return <Content rates={rates} />;
+
+  console.log("Rates en HomePage:", rates); // ← útil para desarrollo
+
+  return (
+    <>
+      {/* Hero con las tasas */}
+      <Content rates={rates} />
+
+      {/* Calculator YA NO VA AQUÍ — se renderiza desde _app.js */}
+    </>
+  );
 }
+
 
 
