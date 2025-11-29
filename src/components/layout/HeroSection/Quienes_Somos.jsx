@@ -22,12 +22,19 @@ const Quienes_Somos = () => {
       </div>
 
       <div className={styles.derecha}>
-        <Image
+        <Image className={styles.imagen}
           src="/Quienes_Somos.jpeg"
           alt="Foto oficinas EuroDollar"
-          width={480}
-          height={410}
-          className={styles.imagen}
+  width={800}
+  height={600}
+  style={{
+    maxWidth: "100%",
+    maxHeight: "100%",
+    width: "auto",
+    height: "auto",
+    objectFit: "cover",
+    borderRadius: "15px",
+  }}
         />
       </div>
      </div>

@@ -1,0 +1,38 @@
+// styles/scss/abstracts/_mixins.scss
+
+// Aquí van solo mixins genéricos,
+// ¡SIN el mixin `grid`!
+
+// Centrado flexible reutilizable
+@mixin flex-center(
+  $direction: row,
+  $justify: center,
+  $align: center,
+  $gap: 0
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+// Mixin base para white cards de EuroDollar
+@mixin card-base(
+  $padding: 2.5rem,
+  $radius: 25px,
+  $shadow-color: rgba(0, 0, 0, 0.12),
+  $bg: #fff
+) {
+  background-color: $bg;
+  border-radius: $radius;
+  box-shadow: 8px 8px 0 $shadow-color;
+  padding: $padding;
+}
+
+// Otros mixins que ya tuvieras (texto, botones, etc.)
+// pero elimina cualquier cosa como:
+//
+// @mixin grid($cols, $gap: 2rem) { ... }
+//
+

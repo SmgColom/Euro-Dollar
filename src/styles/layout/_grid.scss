@@ -1,0 +1,9 @@
+@use "sass:color";
+@use '@/styles/scss/abstracts/' as *;
+
+@mixin grid($columns, $gap: 2rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+

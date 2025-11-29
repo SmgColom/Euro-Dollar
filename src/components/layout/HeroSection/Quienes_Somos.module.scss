@@ -3,7 +3,7 @@
 
 .QuienesSomosWrapper {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -25,14 +25,16 @@
 
 
 .izquierda {
-  height: 435px;
-  text-align: center;
+  display:flex;
+  flex-direction: column;
   background: white;
   color: $complementaryColor;
-  padding: 0rem 2rem 1rem 1rem;
+  padding: 2rem 2rem 2rem 2rem;
   border-radius: 25px;
-  width: 42%;
+  width: 600px;
+  height: 450px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+
 
   @media (max-width: 900px) {
     width: 100%;
@@ -54,19 +56,25 @@
   }
 }
 
-
-
 .derecha {
-  height: max-content;
+  display:flex;
+  flex-direction: column;
   background: white;
-  padding-top: 1rem;            
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 0rem;
-  border-radius: 2rem;
-  box-shadow: 12px 12px 0 rgba(0,0,0,0.1);
-  width: 45%;
+  color: $complementaryColor;
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 25px;
+  width: 600px;
+  height: 450px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+  align-items: center;
+  overflow: hidden;
 }
+}
+
+.imagen{
+
+
+
 }
 
 

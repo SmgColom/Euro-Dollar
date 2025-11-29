@@ -4,7 +4,7 @@
 /* WRAPPER GENERAL */
 .calculatorWrapper {
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 0rem 0rem 0rem;
   text-align: center;
 }
 
@@ -29,13 +29,17 @@
 .Izquierda {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
-  padding-top: 0rem;
+  gap:50px;
+  color: $complementaryColor;
+  padding: 2rem 2rem 2rem 2rem;
+  width: 600px;
+  height: 450px;
+  
 }
 .featureItem {
   display: flex;
   align-items: center;
-  gap: 7rem;
+  
 }
 
 .featureBox {
@@ -50,15 +54,13 @@
 
 /* RIGHT CARD */
 .Derecha {
-  height: max-content;
+  height: 450px;
+  width: 600px;
   background: white;
-  padding-top: 2rem;            
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 0rem;
-  border-radius: 2rem;
-  box-shadow: 12px 12px 0 rgba(0,0,0,0.1);
-  width: 45%;
+  color: $complementaryColor;
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 25px;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 
