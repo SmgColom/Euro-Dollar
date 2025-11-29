@@ -2,6 +2,7 @@ import styles from "./Content.module.scss";
 import Image from "next/image";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
 
+
 const Hero = ({ rates = [] }) => {
 
   // Normalizar cualquier nombre de moneda (quita acentos, mayúsculas, plurales)
@@ -17,7 +18,9 @@ const Hero = ({ rates = [] }) => {
   const dolar = rates.find((r) => normalize(r.moneda).includes("dolar"));
 
   return (
-    <section className={styles.heroWrapper}>
+    <section 
+    id="inicio"
+    className={`${styles.heroWrapper} section-offset`}>
       <div className={styles.heroContent}>
 
         {/* LEFT CARD */}

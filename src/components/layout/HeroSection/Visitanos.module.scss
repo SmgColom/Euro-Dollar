@@ -1,6 +1,5 @@
 @use '@/styles/scss/abstracts/' as *;
 
-
 .bgWrapper {
   padding: 2rem 0rem 0rem 0rem;
   background-image: url('/Fondo_Visitanos.png');
@@ -17,8 +16,6 @@
     z-index: 0;
   }
 }
-
-
 .wrapper {
   position: relative;
   z-index: 1;

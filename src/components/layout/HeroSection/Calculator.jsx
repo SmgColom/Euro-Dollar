@@ -45,7 +45,9 @@ const Calculator = ({ rates = [] }) => {
   }, [tengo, cambioA, cantidadTengo]);
 
   return (
-    <section className={styles.calculatorWrapper}>
+    <section
+    id="calculator" 
+    className={`${styles.calculatorWrapper} section-offset`}>
       <h2 className={styles.title}>CALCULADORA</h2>
 
       <div className={styles.container}>

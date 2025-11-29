@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const Sucursales = () => {
   return (
-   
-      <div className={styles.wrapper}>
+   <div className={styles.bgWrapper}>
+<div className={styles.wrapper}>
         <h2 className={styles.titulo}>Visítanos</h2>
 
         <div className={styles.container}>
@@ -53,6 +53,9 @@ const Sucursales = () => {
 
         </div>
       </div>
+
+   </div>
+      
  
   );
 };

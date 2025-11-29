@@ -1,29 +1,46 @@
 import Content from "@/components/layout/HeroSection/Content";
+import Calculator from "@/components/layout/HeroSection/Calculator";
+import Quienes_Somos from "@/components/layout/HeroSection/Quienes_Somos";
+import Visitanos from "@/components/layout/HeroSection/Visitanos";
+import Contactanos from "@/components/layout/HeroSection/Contactanos";
+import Politica from "@/components/layout/HeroSection/Politica";
 import { getRates } from "@/lib/getRates";
+import main from "../styles/scss/main.scss";
 
 export async function getServerSideProps() {
   try {
-    const rates = await getRates(); // ← obtiene divisas desde Google Sheets
+    const rates = await getRates();
     return { props: { rates } };
-  } catch (error) {
-    console.error("ERROR GOOGLE SHEETS (SSR):", error);
+  } catch (e) {
+    console.error(e);
     return { props: { rates: [] } };
   }
 }
 
 export default function HomePage({ rates }) {
-
-  console.log("Rates en HomePage:", rates); // ← útil para desarrollo
-
   return (
     <>
-      {/* Hero con las tasas */}
-      <Content rates={rates} />
-
-      {/* Calculator YA NO VA AQUÍ — se renderiza desde _app.js */}
+        <div id="inicio">
+        <Content rates={rates} />
+        </div>
+        <div id="calculator">
+        <Calculator rates={rates} />
+        </div>
+        <div id="quienes">
+        <Quienes_Somos />
+        </div>
+        <div id="visitanos">
+        <Visitanos />
+        </div>
+        <div id="contacto">
+        <Contactanos />
+      </div>
+      <Politica />
     </>
   );
 }
+
+
 
 
 

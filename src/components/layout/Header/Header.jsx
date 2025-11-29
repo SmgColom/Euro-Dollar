@@ -51,11 +51,11 @@ function Header() {
       {/* Menú de navegación con clase activa si está abierto */}
       <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
         <ul>
-          <li><Link href="/" onClick={() => setMenuOpen(false)}>Tasa</Link></li>
-          <li><Link href="/about" onClick={() => setMenuOpen(false)}>Calculadora</Link></li>
-          <li><Link href="/news/blog" onClick={() => setMenuOpen(false)}>Quienes Somos</Link></li>
-          <li><Link href="/news/blog" onClick={() => setMenuOpen(false)}>Visítanos</Link></li>
-          <li><Link href="/contact" onClick={() => setMenuOpen(false)}>Contáctanos</Link></li>
+          <li><Link href="#inicio" onClick={() => setMenuOpen(false)}>Tasa</Link></li>
+          <li><Link href="#calculator" onClick={() => setMenuOpen(false)}>Calculadora</Link></li>
+          <li><Link href="#quienes" onClick={() => setMenuOpen(false)}>Quienes Somos</Link></li>
+          <li><Link href="#visitanos" onClick={() => setMenuOpen(false)}>Visítanos</Link></li>
+          <li><Link href="#contacto" onClick={() => setMenuOpen(false)}>Contáctanos</Link></li>
         </ul>
       </nav>
     </header>
