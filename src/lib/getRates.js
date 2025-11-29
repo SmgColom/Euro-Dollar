@@ -15,8 +15,10 @@ export async function getRates() {
   // Leer TODAS las divisas desde B3 hasta el final de la tabla
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: process.env.GOOGLE_SHEET_ID,
-    range: "'Tasas del dia'!B3:D8", // lee columnas B, C, D dinámicamente
+    range: "'Tasas del dia'!B3:D9", // lee columnas B, C, D dinámicamente
   });
+
+  console.log("Filas obtenidas:", response.data.values);
 
   const rows = response.data.values;
 
