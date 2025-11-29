@@ -103,7 +103,7 @@ const Calculator = ({ rates = [] }) => {
 
   return (
     <section id="calculator" className={`${styles.calculatorWrapper}`}>
-      <h2 className={styles.title}>CALCULADORA</h2>
+      <h2 className={styles.title}>Calculadora</h2>
 
       <div className={styles.container}>
 
