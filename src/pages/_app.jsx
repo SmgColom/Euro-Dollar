@@ -9,6 +9,7 @@ import Calculator from '@/components/layout/HeroSection/Calculator';
 import Quienes_Somos from '@/components/layout/HeroSection/Quienes_Somos';
 import Visitanos from '@/components/layout/HeroSection/Visitanos';
 import Contactanos from '@/components/layout/HeroSection/Contactanos';
+import Politica from '@/components/layout/HeroSection/Politica';
 
 
 function App({ Component, pageProps }) {
@@ -52,6 +53,8 @@ function App({ Component, pageProps }) {
         <Quienes_Somos />
         <Visitanos />
         <Contactanos />
+        <Politica />
+        
       </Layout>
     </Fragment>
   );
