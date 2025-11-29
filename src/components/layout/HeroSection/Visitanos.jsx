@@ -2,9 +2,10 @@ import React from "react";
 import styles from "./Visitanos.module.scss";
 import Image from "next/image";
 
+
 const Sucursales = () => {
   return (
-    <section className={styles.bgWrapper}>
+   
       <div className={styles.wrapper}>
         <h2 className={styles.titulo}>Visítanos</h2>
 
@@ -52,7 +53,7 @@ const Sucursales = () => {
 
         </div>
       </div>
-    </section>
+ 
   );
 };
 
