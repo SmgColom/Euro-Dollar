@@ -18,9 +18,8 @@ const Hero = ({ rates = [] }) => {
   const dolar = rates.find((r) => normalize(r.moneda).includes("dolar"));
 
   return (
-    <section 
-    id="inicio"
-    className={`${styles.heroWrapper} section-offset`}>
+  
+    <section className={styles.heroWrapper}>
       <div className={styles.heroContent}>
 
         {/* LEFT CARD */}

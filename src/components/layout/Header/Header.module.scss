@@ -1,6 +1,17 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
+/* ------------------------------------------
+   Empuja el contenido cuando el menú abre
+------------------------------------------- */
+.menu-open .main {
+  margin-top: 350px !important;   // Ajusta a gusto
+}
+
+
+/* ------------------------------------------
+   HEADER BASE
+------------------------------------------- */
 .header {
   width: 100%;
   display: flex;
@@ -10,7 +21,7 @@
   position: fixed;
   z-index: 10;
   top: 0;
-  background-color:$primaryColor;
+  background-color: $primaryColor;
   flex-direction: row;
 
   &.scrolled {
@@ -19,12 +30,15 @@
   }
 
   .brand img {
-  left:1rem;
-  height: 55px;      
-  width: auto;
-  object-fit: contain;
+    left: 1rem;
+    height: 55px;
+    width: auto;
+    object-fit: contain;
   }
 
+  /* ------------------------------------------
+     NAV DESKTOP
+  ------------------------------------------- */
   .nav {
     ul {
       list-style: none;
@@ -36,9 +50,9 @@
       li {
         position: relative;
         margin-left: 3rem;
-        
 
-        span, a  {
+        span,
+        a {
           font-size: 1.2em;
           font-weight: 400;
           letter-spacing: 1px;
@@ -46,7 +60,6 @@
           background: none;
           border: none;
           cursor: pointer;
-          
 
           &:hover,
           &:active {
@@ -54,6 +67,7 @@
           }
         }
 
+        /* Dropdown */
         .dropdownMenu {
           background-color: $complementaryColor;
           display: none;
@@ -64,20 +78,20 @@
           padding: 1rem;
           z-index: 100;
 
-
           li {
             margin: 0.5rem 0;
             position: relative;
 
-            span, a {
+            span,
+            a {
               color: white;
-              
 
               &:hover {
                 color: $brandColor;
               }
             }
 
+            /* Submenu */
             .submenuList {
               background-color: $complementaryColor;
               display: none;
@@ -104,6 +118,9 @@
     }
   }
 
+  /* ------------------------------------------
+     MODAL
+  ------------------------------------------- */
   .modalOverlay {
     position: fixed;
     top: 0;
@@ -116,7 +133,7 @@
     align-items: center;
     z-index: 999;
   }
-  
+
   .modalContent {
     position: relative;
     background: white;
@@ -128,25 +145,25 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .modalImage {
     max-width: 100%;
     max-height: 80vh;
     border-radius: 8px;
   }
-  
-  .closeButton {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  
 
-  // Mobile styles
+  /* ------------------------------------------
+     TABLET ADJUST
+  ------------------------------------------- */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .header {
+      padding: 4rem 4rem;
+    }
+  }
+
+  /* ------------------------------------------
+     MOBILE VERSION
+  ------------------------------------------- */
   @media (max-width: 768px) {
     .brand {
       position: absolute;
@@ -157,9 +174,10 @@
 
     .brand img {
       height: 55px;
-      width:300px;
+      width: 300px;
     }
 
+    /* HAMBURGER */
     .hamburger {
       position: absolute;
       margin: 20px;
@@ -173,21 +191,17 @@
       cursor: pointer;
       z-index: 11;
 
-      span, a {
+      span {
         height: 3px;
         width: 100%;
         background: $complementaryColor;
         transition: all 0.3s ease-in-out;
-
-        @media (min-width: 769px){
-          padding: 10px;
-        }
       }
-
-      
     }
 
+    /* NAV MOBILE */
     .nav {
+      position: relative;   
       display: none;
       width: 100%;
       margin-top: 6.5rem;
@@ -200,18 +214,17 @@
       ul {
         flex-direction: column;
         align-items: flex-start;
+        padding: 1rem 2rem;
 
         li {
           width: 100%;
-          margin: 0.5rem 0;
-          text-align: left;
+          margin: 1rem 0;
 
-          span, a {
+          span,
+          a {
             width: 100%;
             display: block;
             padding: 0.5rem 0;
-
-
           }
 
           .dropdownMenu {
@@ -219,13 +232,12 @@
             background-color: transparent;
             box-shadow: none;
             padding: 0;
-              
-            
 
             li {
               margin: 0.5rem 0;
 
-              span, a {
+              span,
+              a {
                 color: $complementaryColor;
 
                 &:hover {
@@ -238,14 +250,6 @@
                 position: static;
                 padding-left: 1rem;
                 flex-direction: column;
-
-                span, a{
-                  color: #f8f9fa;
-
-                  &:hover {
-                    color: $brandColor;
-                  }
-                }
               }
 
               &:hover .submenuList {
@@ -261,14 +265,16 @@
       }
     }
   }
-  @media (min-width: 768px) and (max-width: 1024px) {
 
-    .brand img {
-      width:250px;
+  
+  @media (min-width: 769px) {
+    .hamburger {
+      display: none;
     }
+  }
 }
 
-}
+
 
 
 
