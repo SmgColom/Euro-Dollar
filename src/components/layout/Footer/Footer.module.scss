@@ -3,42 +3,72 @@
 .footerwrapper {
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  background-color:$complementaryColor;
+  background-color: $complementaryColor;
   font-family: Work Sans, sans-serif;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 2rem;
   box-sizing: border-box;
 
-.logoSection{
-
-  .logo img {
-    height: 55px;
-    width: 100%;
-    left:1rem;
+  .logoSection {
+    .logo img {
+      height: 55px;
+      width: auto;
+    }
   }
 
-}
-
-  .copyright{
-    color:$primaryColor
+  .copyright {
+    color: $primaryColor;
+    font-size: 18px;
+    text-align: left;
   }
 
-  .socialIcons{
+  .socialIcons {
     display: flex;
     margin-right: 20rem;
     color: $primaryColor;
     justify-content: space-between;
-
     a {
-       margin:0.5rem;
-       align-items: center;
-
-    svg {
-        display: block;       
-        line-height: 1;      
-        }
+      margin: 0.5rem;
+      align-items: center;
+      svg {
+        display: block;
+        line-height: 1;
+      }
     }
   }
-
 }
+
+
+@media (max-width: 430px) {
+
+  .footerwrapper {
+    flex-direction: column;           
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;               
+    text-align: center;
+  }
+
+  .logoSection .logo img {
+    height: 45px;                      
+  }
+
+  .copyright {
+    font-size: 14px;                   
+    margin-top: 1rem;
+  }
+
+  .socialIcons {
+    margin-right: 0 !important;        
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 1rem;
+
+    a svg {
+      width: 32px;                     
+      height: 32px;
+    }
+  }
+}
+

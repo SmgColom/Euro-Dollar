@@ -93,13 +93,13 @@ const Hero = ({ rates = [] }) => {
           </p>
 
           <a
-            href="https://wa.me/573001112233"
-            target="_blank"
-            className={styles.whatsappBtn}
+          href="https://wa.me/573001112233"
+          target="_blank"
+          className={styles.whatsappBtn}
           >
-            <img src="/Digital_Glyph_Green.svg" alt="WhatsApp" />
-            Habla con nosotros
-          </a>
+          <img src="/Digital_Glyph_Green.svg" alt="WhatsApp" />
+          <span className={styles.whatsappText}>Habla con nosotros</span>
+        </a>
         </div>
 
       </div>
