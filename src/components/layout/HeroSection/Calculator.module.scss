@@ -184,10 +184,10 @@
     padding: 3rem 3rem 0rem 3rem;
   }
 .Derecha{
-  margin-left: 40px;
+  margin-left: 12px;
 }
 .Izquierda{
-  margin-left: 12px;
+  margin-left: 40px;
 }
 }
 
@@ -197,31 +197,32 @@
 ------------------------------------------------------- */
 @media (min-width: 650px) and (max-width: 991px) {
   .calculatorWrapper {
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 2rem !important;
-    padding: 2rem !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem 1rem 0rem;
   }
 
   .cardLeft,
   .cardRight {
-    width: 85% !important;
-    max-width: 520px !important;
-    margin: 0 auto !important;
+    width: 100% ;       
+    width: 700px ; 
+    margin: 0 auto;
+    height: auto;
   }
 
-  /* Entradas y selects ajustados para mejor centro */
+  
   .formRow {
-    justify-content: center !important;
-    gap: 1rem !important;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .formLabel,
   .formInput,
   .formSelect {
-    width: 100% !important;
-    max-width: 350px !important;
+    width: 100%;
+    max-width: 700px;
   }
 }
 

@@ -42,7 +42,10 @@
   }
 
   .texto {
-    margin-top: 11rem;   /* ✔ Se mantiene para desktop */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-size: 20px;
     font-family: open-sans, sans-serif;
@@ -91,7 +94,7 @@
   }
 
   .izquierda .texto {
-    margin-top: 1rem !important; 
+    margin-top: 1rem; 
     font-size: 18px;
     line-height: 1.4;
   }
@@ -107,43 +110,82 @@
   }
 }
 
-
-/* 📌 iPad / Laptop pequeños – igualar comportamiento de Visítanos */
 @media (min-width: 900px) and (max-width: 1300px) {
 
-  /* Ajusta padding del contenedor principal */
+ 
   .QuienesSomosWrapper {
-    padding: 2rem 3rem !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
   }
 
-  .container {
-    width: 100%;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: flex-start !important;
-    gap: 0 !important;
-    padding: 0 !important;
-    align-items: stretch !important;
-  }
-
-  /* Ambas tarjetas toman el mismo ancho que Visítanos */
+  
   .izquierda,
   .derecha {
-    width: 48% !important;
-    max-width: none !important;
-    height: auto !important;
-    margin: 0 !important;
+    width: 48%;
+    max-width: none;
+    height: auto;
+    margin: 0;
   }
 
   /* Asegura que el texto se vea centrado verticalmente si es necesario */
   .izquierda .texto {
-    margin-top: 4rem !important;
+    margin-top: 4rem;
   }
 
   /* Imagen responsiva */
   .imagen {
-    width: 100% !important;
-    height: auto !important;
+    width: 100%;
+    height: auto;
     object-fit: cover;
+  }
+}
+
+/* ------------------------------------------------------
+   🎯 iPad Mini (768px) → centrar todo
+------------------------------------------------------- */
+@media (min-width: 650px) and (max-width: 991px) {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 2rem 1rem 1rem;
+  }
+
+  .izquierda{
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+  }
+    
+
+  .derecha {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .derecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
   }
 }
