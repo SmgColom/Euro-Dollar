@@ -55,7 +55,7 @@ const Hero = ({ rates = [] }) => {
             <div className={styles.rateRow}>
               <div className={styles.iconAndName}>
                 <div className={styles.circleIcon}>
-                  <Image src="/us.svg" alt="USD" width={55} height={55} />
+                  <Image src="/US.svg" alt="USD" width={55} height={55} />
                 </div>
                 <strong>Dólar</strong>
               </div>
