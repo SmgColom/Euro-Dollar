@@ -15,10 +15,7 @@
   font-weight: 700;
 }
 
-/* ------------------------------
-   DISEÑO ORIGINAL (Desktop / Tablet)
-   NO SE MODIFICA
---------------------------------*/
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -76,32 +73,31 @@
   object-fit: cover;
 }
 
-/* ------------------------------
-   🔥 RESPONSIVE SOLO PARA MÓVILES (<430px)
---------------------------------*/
 @media (max-width: 430px) {
 
   .container {
-    flex-direction: column;      /* ➜ Se apilan */
-    padding: 1.5rem;            /* Reduce padding */
+    flex-direction: column;      
+    padding: 1.5rem;            
     gap: 2rem;
   }
 
   .izquierda, 
   .derecha {
-    width: 100%;                /* ➜ Ocupan todo el ancho */
-    height: auto;               /* ➜ Se adaptan al contenido */
-    padding: 1.5rem;            /* ➜ Más compactas */
+    align-items: center;
+    text-align: center;
+    width: 100%;            
+    height: auto;               
+    padding: 1.5rem;            
   }
 
   .izquierda .texto {
-    margin-top: 1rem !important; /* Corrige el salto enorme */
+    margin-top: 1rem !important; 
     font-size: 18px;
     line-height: 1.4;
   }
 
   .imagen {
-    width: 100%;                /* Imagen se adapta a móvil */
+    width: 100%;                
     max-width: 220px;
     margin: 0 auto 1rem auto;
   }
