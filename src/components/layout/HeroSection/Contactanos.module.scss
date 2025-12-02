@@ -69,13 +69,14 @@
   }
 
   .card {
-    flex-direction: column;          
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         
     width: 100%;                     
-    height: auto;                    
+    height: 250px;                    
     padding: 1.5rem;
-    gap: 1.5rem;
-    text-align: center;
-    align-items: center;             
+    gap: 1rem;
+           
   }
 
   .photoWrapper {
@@ -97,24 +98,24 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1100px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
 
   .wrapper {
-    padding: 2rem 3rem 0 3rem !important;   
+    padding: 2rem 3rem 0 3rem;   
   }
 
   .container {
     justify-content: space-between !important;
     gap: 3rem;
-    align-items: center;         // alinea verticalmente las dos cards
+    align-items: center;         
   }
 
   .card {
-    width: 600px;                // mismo ancho que Visítanos
-    height: 550px;               // misma altura
+    width: 600px;                
+    height: 550px;               
   }
 
-  /* 🔹 Reducimos un poco el celular para que respire mejor */
+
   .photoWrapper {
     width: 160px;
     height: 320px;
@@ -123,10 +124,9 @@
   .photo {
     height: 100%;
     width: auto;
-    object-fit: contain;         // mantiene proporción y no deforma
+    object-fit: contain;         
   }
-
-  /* 🔹 Iconos un poco más grandes y centrados */
+  
   .iconWrapper {
     gap: 1.5rem;
   }
@@ -134,5 +134,22 @@
   .iconWrapper svg {
     width: 80px;
     height: 80px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 991px) {
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3rem 1rem 1rem 4rem;
+  }
+
+  .card{
+    width:705px;
+    max-width: 705px !important;
   }
 }

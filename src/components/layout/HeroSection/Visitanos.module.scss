@@ -159,6 +159,24 @@
   }
 }
 
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  .wrapper {
+    padding: 2rem 3rem 0 3rem;   
+  }
+
+  .container {
+    justify-content: space-between !important;
+    gap: 3rem;
+    align-items: center;         
+  }
+
+  .card {
+    width: 600px;                
+    height: 550px;               
+  }
+}
+
 
 @media (min-width: 650px) and (max-width: 991px) {
 

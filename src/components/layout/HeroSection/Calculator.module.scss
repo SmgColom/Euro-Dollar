@@ -175,27 +175,29 @@
 .invisibleInput { display: none; }
 
 
-@media (min-width: 992px) and (max-width: 1100px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
 
-  .heroContent {
-    flex-direction: row ;
+  .container {
+    flex-direction:row;
     justify-content: center ;
     gap: 3rem ;
-    padding: 3rem 3rem 0rem 3rem;
+    padding: 3rem 2rem 1rem 2rem;
   }
-.Derecha{
-  margin-left: 12px;
+  .Izquierda{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+
 }
-.Izquierda{
-  margin-left: 40px;
-}
-}
+
 
 
 /* ------------------------------------------------------
    🎯 iPad Mini (768px) → centrar todo
 ------------------------------------------------------- */
-@media (min-width: 650px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .calculatorWrapper {
     flex-direction: column;
     align-items: center;
@@ -204,12 +206,11 @@
     padding: 3rem 1rem 1rem 0rem;
   }
 
-  .cardLeft,
-  .cardRight {
-    width: 100% ;       
-    width: 700px ; 
-    margin: 0 auto;
-    height: auto;
+  .Izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items:last baseline;
+  } 
   }
 
   
@@ -224,7 +225,7 @@
     width: 100%;
     max-width: 700px;
   }
-}
+
 
 
 
