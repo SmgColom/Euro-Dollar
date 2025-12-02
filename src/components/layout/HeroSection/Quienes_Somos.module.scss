@@ -10,46 +10,42 @@
 .titulo {
   font-family: 'Work Sans', sans-serif;
   font-size: 52px;
-  color:$complementaryColor;
+  color: $complementaryColor;
   margin-bottom: 2rem;
   font-weight: 700;
 }
 
-
+/* ------------------------------
+   DISEÑO ORIGINAL (Desktop / Tablet)
+   NO SE MODIFICA
+--------------------------------*/
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;   
+  align-items: flex-start;
   padding: 2rem 6rem 2rem 1.8rem;
   overflow: visible;
-
-
+}
 
 .izquierda {
-  display:flex;
+  display: flex;
   flex-direction: column;
   background: white;
   color: $complementaryColor;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
   border-radius: 25px;
   width: 600px;
   height: 550px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
 
-
-  @media (max-width: 900px) {
-    width: 100%;
-  }
-
   h2 {
-
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1rem;
   }
-  .texto  {
-    margin-top: 11rem;
-    justify-content: center;
+
+  .texto {
+    margin-top: 11rem;   /* ✔ Se mantiene para desktop */
     text-align: center;
     font-size: 20px;
     font-family: open-sans, sans-serif;
@@ -58,11 +54,11 @@
 }
 
 .derecha {
-  display:flex;
+  display: flex;
   flex-direction: column;
   background: white;
   color: $complementaryColor;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
   border-radius: 25px;
   width: 600px;
   height: 550px;
@@ -70,16 +66,51 @@
   align-items: center;
   overflow: hidden;
 }
-}
 
-.imagen{
+.imagen {
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   border-radius: 15px;
-  object-fit: cover; 
+  object-fit: cover;
 }
+
+/* ------------------------------
+   🔥 RESPONSIVE SOLO PARA MÓVILES (<430px)
+--------------------------------*/
+@media (max-width: 430px) {
+
+  .container {
+    flex-direction: column;      /* ➜ Se apilan */
+    padding: 1.5rem;            /* Reduce padding */
+    gap: 2rem;
+  }
+
+  .izquierda, 
+  .derecha {
+    width: 100%;                /* ➜ Ocupan todo el ancho */
+    height: auto;               /* ➜ Se adaptan al contenido */
+    padding: 1.5rem;            /* ➜ Más compactas */
+  }
+
+  .izquierda .texto {
+    margin-top: 1rem !important; /* Corrige el salto enorme */
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .imagen {
+    width: 100%;                /* Imagen se adapta a móvil */
+    max-width: 220px;
+    margin: 0 auto 1rem auto;
+  }
+
+  .titulo {
+    font-size: 42px;
+  }
+}
+
 
 
 
