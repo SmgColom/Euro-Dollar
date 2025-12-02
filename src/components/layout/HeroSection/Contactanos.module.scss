@@ -1,7 +1,6 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
-
 .wrapper {
   position: relative;
   z-index: 1;
@@ -13,16 +12,14 @@
 }
 
 .container {
-  padding: 2rem 0rem 2rem 0rem;
+  padding: 2rem 0rem;
   display: flex;
   justify-content: space-between;
   gap: 3rem;
-
 }
 
-
 .card {
-  display:flex;
+  display: flex;
   flex-direction: row;
   text-align: center;
   align-items: center;
@@ -30,12 +27,11 @@
   gap: 2rem;
   background: white;
   color: $complementaryColor;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem;
   border-radius: 25px;
   width: 600px;
   height: 550px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
-
 }
 
 .titulo {
@@ -48,7 +44,7 @@
 
 .photoWrapper {
   position: relative;
-  width: 200px;   
+  width: 200px;
   height: 400px;
   border-radius: 25px;
 }
@@ -57,8 +53,50 @@
   object-fit: cover;
   height: auto;
   width: auto;
-
 }
+
+@media (max-width: 430px) {
+
+  .wrapper {
+    padding: 1.5rem !important;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+
+  .card {
+    flex-direction: column;          
+    width: 100%;                     
+    height: auto;                    
+    padding: 1.5rem;
+    gap: 1.5rem;
+    text-align: center;
+    align-items: center;             
+  }
+
+  .photoWrapper {
+    width: 100%;                     
+    height: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo {
+    width: 90%;
+    max-width: 300px;                
+    border-radius: 20px;
+    height: auto;
+  }
+
+  .titulo {
+    font-size: 40px;                
+  }
+}
+
 
 
 
