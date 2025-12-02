@@ -201,6 +201,7 @@
 
   p {
     margin-top: 40px;
+    margin-right: 15px;
     font-family: Open Sans, sans-serif;
     line-height: 1.6;
     font-size: 20px;
@@ -287,4 +288,74 @@
     }
   }
 }
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .heroContent {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem ;
+    padding: 3rem 3rem 0rem 3rem;
+  }
+
+  .leftCard,
+  .rightContent {
+    width: 48% !important;     
+    max-width: 500px !important;
+    height: auto !important;   
+  }
+
+  .rightContent h3 {
+    margin-top: 0 !important;
+  }
+}
+
+/* ------------------------------------------------------
+   🎯 iPad Mini (768px × 1024px)
+   — Una sola columna pero centrada
+   — WhatsApp solo ícono tipo móvil
+------------------------------------------------------- */
+@media (min-width: 650px) and (max-width: 991px) {
+  /* Centrar contenedor */
+  .heroContent {
+    flex-direction: column ;
+    align-items: center ;
+    justify-content: center ;
+    padding: 3rem 2rem ;
+    gap: 2rem ;
+  }
+
+  /* Centrar tarjetas */
+  .leftCard,
+  .rightContent {
+    width: 80% !important;       /* No tan grandes como desktop */
+    max-width: 500px !important; /* Límite visual */
+    margin: 0 auto !important;
+    height: auto !important;
+  }
+
+  .rightContent h3 {
+    margin-top: 1rem !important;
+  }
+
+  /* WhatsApp estilo móvil */
+  .whatsappBtn {
+    bottom: 18px !important;
+    right: 18px !important;
+    padding: 0.5rem !important;
+    border-radius: 999px !important;
+    margin-left: 0 !important;
+  }
+
+  .whatsappText {
+    display: none !important;
+  }
+
+  .whatsappBtn img {
+    width: 46px !important;
+    height: 46px !important;
+    margin-right: 0 !important;
+  }
+}
+
 

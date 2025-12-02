@@ -1,17 +1,10 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
-/* ------------------------------------------
-   Empuja el contenido cuando el menú abre
-------------------------------------------- */
 .menu-open .main {
-  margin-top: 350px !important;   // Ajusta a gusto
+  margin-top: 350px !important;   
 }
 
-
-/* ------------------------------------------
-   HEADER BASE
-------------------------------------------- */
 .header {
   width: 100%;
   display: flex;
@@ -36,9 +29,6 @@
     object-fit: contain;
   }
 
-  /* ------------------------------------------
-     NAV DESKTOP
-  ------------------------------------------- */
   .nav {
     ul {
       list-style: none;
@@ -67,7 +57,6 @@
           }
         }
 
-        /* Dropdown */
         .dropdownMenu {
           background-color: $complementaryColor;
           display: none;
@@ -91,7 +80,6 @@
               }
             }
 
-            /* Submenu */
             .submenuList {
               background-color: $complementaryColor;
               display: none;
@@ -118,9 +106,6 @@
     }
   }
 
-  /* ------------------------------------------
-     MODAL
-  ------------------------------------------- */
   .modalOverlay {
     position: fixed;
     top: 0;
@@ -153,16 +138,24 @@
   }
 
   /* ------------------------------------------
-     TABLET ADJUST
+     🎯 TABLET (iPad / iPad Air / iPad Pro)
+     834px – 1366px
+     Sin dañar desktop ni móviles
   ------------------------------------------- */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .header {
-      padding: 4rem 4rem;
+  @media (min-width: 834px) and (max-width: 1366px) {
+    padding: 1.25rem 3rem;     /* más equilibrado para tablet */
+
+    .brand img {
+      height: 50px;           /* ligeramente más pequeño */
+    }
+
+    .nav ul li {
+      margin-left: 2rem;      /* reduce espacio entre items */
     }
   }
 
   /* ------------------------------------------
-     MOBILE VERSION
+     📱 MOBILE VERSION
   ------------------------------------------- */
   @media (max-width: 768px) {
     .brand {
@@ -177,7 +170,6 @@
       width: 300px;
     }
 
-    /* HAMBURGER */
     .hamburger {
       position: absolute;
       margin: 20px;
@@ -199,7 +191,6 @@
       }
     }
 
-    /* NAV MOBILE */
     .nav {
       position: relative;   
       display: none;
@@ -266,13 +257,18 @@
     }
   }
 
-  
+  /* ------------------------------------------
+     Desktop: oculta hamburguesa
+  ------------------------------------------- */
   @media (min-width: 769px) {
     .hamburger {
       display: none;
     }
   }
 }
+
+
+
 
 
 

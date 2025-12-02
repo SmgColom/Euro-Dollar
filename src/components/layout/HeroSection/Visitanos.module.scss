@@ -160,4 +160,23 @@
 }
 
 
+@media (min-width: 900px) and (max-width: 1300px) {
 
+  .wrapper {
+    padding: 2rem 3rem !important; 
+  }
+
+  .container {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    gap: 0 !important;    
+    padding: 0 !important;
+  }
+
+  .card {
+    width: 48% !important;   
+    margin: 0 !important;
+  }
+}

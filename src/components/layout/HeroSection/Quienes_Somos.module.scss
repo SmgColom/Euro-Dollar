@@ -108,21 +108,42 @@
 }
 
 
+/* 📌 iPad / Laptop pequeños – igualar comportamiento de Visítanos */
+@media (min-width: 900px) and (max-width: 1300px) {
 
+  /* Ajusta padding del contenedor principal */
+  .QuienesSomosWrapper {
+    padding: 2rem 3rem !important;
+  }
 
+  .container {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+  }
 
+  /* Ambas tarjetas toman el mismo ancho que Visítanos */
+  .izquierda,
+  .derecha {
+    width: 48% !important;
+    max-width: none !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
 
+  /* Asegura que el texto se vea centrado verticalmente si es necesario */
+  .izquierda .texto {
+    margin-top: 4rem !important;
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /* Imagen responsiva */
+  .imagen {
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+}

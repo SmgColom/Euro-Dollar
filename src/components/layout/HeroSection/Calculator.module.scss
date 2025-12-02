@@ -175,6 +175,58 @@
 .invisibleInput { display: none; }
 
 
+@media (min-width: 992px) and (max-width: 1100px) {
+
+  .heroContent {
+    flex-direction: row ;
+    justify-content: center ;
+    gap: 3rem ;
+    padding: 3rem 3rem 0rem 3rem;
+  }
+.Derecha{
+  margin-left: 40px;
+}
+.Izquierda{
+  margin-left: 12px;
+}
+}
+
+
+/* ------------------------------------------------------
+   🎯 iPad Mini (768px) → centrar todo
+------------------------------------------------------- */
+@media (min-width: 650px) and (max-width: 991px) {
+  .calculatorWrapper {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2rem !important;
+    padding: 2rem !important;
+  }
+
+  .cardLeft,
+  .cardRight {
+    width: 85% !important;
+    max-width: 520px !important;
+    margin: 0 auto !important;
+  }
+
+  /* Entradas y selects ajustados para mejor centro */
+  .formRow {
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+
+  .formLabel,
+  .formInput,
+  .formSelect {
+    width: 100% !important;
+    max-width: 350px !important;
+  }
+}
+
+
+
 
 
 
