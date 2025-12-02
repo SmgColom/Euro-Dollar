@@ -29,10 +29,9 @@
 
 .titulo {
   
-  font-size: 40px;
+  font-size: 52px;
   text-align: center;
   width: 100%;
-  font-size: 40px;
   font-weight: 700;
   font-family: 'Work Sans', sans-serif;
   color: $complementaryColor;
@@ -59,7 +58,7 @@
   padding: 2rem 2rem 2rem 2rem;
   border-radius: 25px;
   width: 600px;
-  height: 450px;
+  height: 550px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
 
 
@@ -78,9 +77,14 @@
   h3 {
     color: $complementaryColor;
     font-family: 'Work Sans', sans-serif;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
+  }
+
+  .styles.btn{
+    font-size: 20px;
+    font-family: Open Sans, sans-serif;
   }
 }
 

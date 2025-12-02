@@ -1,7 +1,39 @@
-// vendor imports
-
-// base imports
 @use './base/base';
+@use './abstracts' as *;
+
+#inicio,
+#calculator,
+#quienes,
+#visitanos,
+#contacto {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 768px) {
+  #inicio,
+  #calculator,
+  #quienes,
+  #visitanos,
+  #contacto {
+    scroll-margin-top: 8rem;
+  }
+}
 
 
-// layout imports
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $primaryColor;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+}
+
+a {
+  color: $complementaryColor;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}

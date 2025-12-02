@@ -5,7 +5,6 @@ import Visitanos from "@/components/layout/HeroSection/Visitanos";
 import Contactanos from "@/components/layout/HeroSection/Contactanos";
 import Politica from "@/components/layout/HeroSection/Politica";
 import { getRates } from "@/lib/getRates";
-import main from "../styles/scss/main.scss";
 
 export async function getServerSideProps() {
   try {
@@ -20,25 +19,32 @@ export async function getServerSideProps() {
 export default function HomePage({ rates }) {
   return (
     <>
-        <div id="inicio">
+      <div id="inicio">
         <Content rates={rates} />
-        </div>
-        <div id="calculator">
+      </div>
+
+      <div id="calculator">
         <Calculator rates={rates} />
-        </div>
-        <div id="quienes">
+      </div>
+
+      <div id="quienes">
         <Quienes_Somos />
-        </div>
-        <div id="visitanos">
+      </div>
+
+      <div id="visitanos">
         <Visitanos />
-        </div>
-        <div id="contacto">
+      </div>
+
+      <div id="contacto">
         <Contactanos />
       </div>
+
       <Politica />
     </>
   );
 }
+
+
 
 
 

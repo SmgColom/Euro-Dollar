@@ -32,7 +32,7 @@
     height: auto;
   }
     .title {
-  font-size: 2rem;
+  font-size: 52px;
   color: $complementaryColor;
   font-family: work sans, sans-serif;
   font-weight: 700;
@@ -61,12 +61,14 @@
   }
 
   p {
-    font-size: 16px;
+    font-size: 20px;
+    font-family: Open Sans, sans-serif;
     color: $complementaryColor;
   }
 
   br {
-    font-size: 16px;
+    font-size: 20px;
+    font-family: Open Sans, sans-serif;
     color: $complementaryColor;
   }
 }

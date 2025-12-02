@@ -12,10 +12,11 @@
   }
 }
 
+
 /* TÍTULO */
 .title {
   font-family: 'Work Sans', sans-serif;
-  font-size: 40px;
+  font-size: 52px;
   color: $complementaryColor;
   font-weight: 700;
 }
@@ -37,7 +38,7 @@
   color: $complementaryColor;
   padding: 2rem 2rem 2rem 0rem;
   width: 600px;
-  height: 450px;
+  height: 550px;
   
 }
 .featureItem {
@@ -51,18 +52,19 @@
   padding: 1rem 2rem;
   border-radius: 2rem;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
-  font-size: 1.1rem;
+  font-size: 20px;
+  font-family: Open Sans, sans-serif;
   font-weight: 600;
   color: #1d3e7d;
 }
 
 /* RIGHT CARD */
 .Derecha {
-  height: 450px;
+  height: 550px;
   width: 600px;
   background: white;
   color: $complementaryColor;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   border-radius: 25px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
 }
@@ -80,7 +82,8 @@
 .actionBtn {
   margin-right: 20px;
   background-color: #1d3e7d;
-
+  font-size: 20px;
+  font-family: Open Sans, sans-serif;
   width: 260px;
   max-width: 200px;
   height: 60px;               
@@ -106,7 +109,8 @@
 
 /* RESULT (valor final) */
 .result {
-  font-size: 1.5rem;
+  font-size: 20px;
+  font-family: Open Sans, sans-serif;
   color: #1d3e7d;
   font-weight: 700;
 }

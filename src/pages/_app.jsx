@@ -2,12 +2,12 @@ import { Fragment, useEffect } from "react";
 import Head from "next/head";
 import Script from "next/script";
 import { useRouter } from "next/router";
-import main from "../styles/scss/main.scss";
+
 
 
 import "@/styles/scss/main.scss";
 
-// ⭐ IMPORTANTE: este import estaba faltando
+
 import Layout from "@/components/layout";
 
 function App({ Component, pageProps }) {
@@ -33,6 +33,7 @@ function App({ Component, pageProps }) {
 }
 
 export default App;
+
 
 
 

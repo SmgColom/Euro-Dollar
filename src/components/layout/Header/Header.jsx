@@ -8,6 +8,7 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const handleScroll = () => setScrolled(window.scrollY > 50);
   const [showModal, setShowModal] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
 
