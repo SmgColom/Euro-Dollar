@@ -110,7 +110,7 @@ const Calculator = ({ rates = [] }) => {
         {/* IZQUIERDA */}
         <div className={styles.Izquierda}>
           <div className={styles.featureItem}>
-            <Image src="/seguridad.svg" alt="Seguridad" width={100} height={100} />
+            <Image src="/Seguridad.svg" alt="Seguridad" width={100} height={100} />
             <div className={styles.featureBox}>Nivel de Seguridad Bancaria</div>
           </div>
 
