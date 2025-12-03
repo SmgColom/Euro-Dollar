@@ -17,7 +17,7 @@
   }
 }
 
-/* CONTENEDOR PRINCIPAL */
+
 .heroContent {
   max-width: 1500px;
   margin: 0 auto;
@@ -36,7 +36,7 @@
   }
 }
 
-/* LEFT CARD */
+
 .leftCard {
   display: flex;
   flex-direction: column;
@@ -68,14 +68,14 @@
   }
 }
 
-/* TABLA DE TASAS */
+
 .ratesTable {
   width: 100%;
   display: grid;
   gap: 1rem;
 }
 
-/* Encabezados: Compra / Venta */
+
 .gridHeader {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
@@ -92,7 +92,7 @@
   }
 }
 
-/* FILA DE TASA */
+
 .rateRow {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
@@ -110,7 +110,7 @@
   }
 }
 
-/* ICONO + NOMBRE */
+
 .iconAndName {
   display: flex;
   align-items: center;
@@ -121,7 +121,7 @@
   }
 }
 
-/* ICONO REDONDO */
+
 .circleIcon {
   width: 55px;
   height: 55px;
@@ -139,7 +139,7 @@
   }
 }
 
-/* WARNING BOX */
+
 .warningRow {
   display: flex;
   align-items: center;
@@ -161,7 +161,6 @@
   font-size: 20px;
 }
 
-/* RIGHT CONTENT */
 .rightContent {
   margin-top: 10px;
   display: flex;
@@ -197,7 +196,7 @@
     text-align: center;
     font-size: 40px;
     font-family: Work Sans, sans-serif;
-    color: #ffcd33;
+    color: $brandColor;
   }
 
   p {
@@ -239,7 +238,7 @@
   }
 }
 
-/* texto al lado del ícono */
+
 .whatsappText {
   margin-left: 0.2rem;
 }
@@ -251,17 +250,17 @@
     right: 16px;
     margin-left: 0;
     padding: 0.4rem;
-    border-radius: 999px;  // botón redondo
+    border-radius: 999px;  
   }
 
   .whatsappText {
-    display: none;         // aquí desaparece "Habla con nosotros"
+    display: none;         
   }
 
   .whatsappBtn img {
-    width: 42px;           // ícono más grande
+    width: 42px;           
     height: 42px;
-    margin-right: 0;       // sin espacio para texto
+    margin-right: 0;       
   }
 }
 
@@ -308,13 +307,9 @@
   }
 }
 
-/* ------------------------------------------------------
-   🎯 iPad Mini (768px × 1024px)
-   — Una sola columna pero centrada
-   — WhatsApp solo ícono tipo móvil
-------------------------------------------------------- */
+
 @media (min-width: 650px) and (max-width: 991px) {
-  /* Centrar contenedor */
+  
   .heroContent {
     flex-direction: column ;
     align-items: center ;
@@ -336,23 +331,23 @@
     margin-top: 1rem !important;
   }
 
-  /* WhatsApp estilo móvil */
+
   .whatsappBtn {
-    bottom: 18px !important;
-    right: 18px !important;
-    padding: 0.5rem !important;
-    border-radius: 999px !important;
-    margin-left: 0 !important;
+    bottom: 18px;
+    right: 18px;
+    padding: 0.5rem;
+    border-radius: 999px;
+    margin-left: 0;
   }
 
   .whatsappText {
-    display: none !important;
+    display: none;
   }
 
   .whatsappBtn img {
-    width: 46px !important;
-    height: 46px !important;
-    margin-right: 0 !important;
+    width: 46px;
+    height: 46px;
+    margin-right: 0;
   }
 }
 
