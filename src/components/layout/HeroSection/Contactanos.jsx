@@ -37,28 +37,24 @@ const Contactanos = () => {
 
           </div>
 
-          {/* CARD 2 */}
+          
           <div className={styles.card}>
 
 
                 <div>
-                    <a href="https://instagram.com/mile_toro" 
-                       title="Instagram" 
-                       aria-label="Instagram" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
+                    <a href="mailto:gerencia@eurodollarcolombia.com" 
+                       title="Email" 
+                       aria-label="Email" 
                         >
-                    <ImMail4 size={100} color='# 18488B'/>
+                    <ImMail4 size={100} color='#18488B'/>
                     </a>
                 </div>
                                 <div>
-                    <a href="https://instagram.com/mile_toro" 
-                       title="Instagram" 
-                       aria-label="Instagram" 
-                       target="_blank" 
-                       rel="noopener noreferrer"
+                    <a href="tel:+573246435412" 
+                       title="Llamar" 
+                       aria-label="Llamar por teléfono" 
                         >
-                    <PiPhoneOutgoingFill size={100} color='# 18488B'/>
+                    <PiPhoneOutgoingFill size={100} color='#18488B'/>
                     </a>
                 </div>
 

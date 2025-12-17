@@ -5,15 +5,13 @@ import { AiOutlineExclamationCircle } from "react-icons/ai";
 
 const Hero = ({ rates = [] }) => {
 
-  // Normalizar cualquier nombre de moneda (quita acentos, mayúsculas, plurales)
+
   const normalize = (str) =>
     str
       ?.toString()
       .toLowerCase()
       .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, ""); // remover acentos
-
-  // Encontrar Euro y Dólar robustamente
+      .replace(/[\u0300-\u036f]/g, "");
   const euro = rates.find((r) => normalize(r.moneda).includes("euro"));
   const dolar = rates.find((r) => normalize(r.moneda).includes("dolar"));
 
@@ -22,12 +20,12 @@ const Hero = ({ rates = [] }) => {
     <section className={styles.heroWrapper}>
       <div className={styles.heroContent}>
 
-        {/* LEFT CARD */}
+       
         <div className={styles.leftCard}>
           <h2>Nuestras Tasa</h2>
 
           <div className={styles.ratesTable}>
-            {/* Subtítulos */}
+          
             <div className={styles.gridHeader}>
               <div></div>
               <div className={styles.headerItem}>
@@ -38,7 +36,7 @@ const Hero = ({ rates = [] }) => {
               </div>
             </div>
 
-            {/* EURO */}
+            
             <div className={styles.rateRow}>
               <div className={styles.iconAndName}>
                 <div className={styles.circleIcon}>
@@ -51,7 +49,7 @@ const Hero = ({ rates = [] }) => {
               <span>${euro?.venta ?? ""}</span>
             </div>
 
-            {/* DÓLAR */}
+          
             <div className={styles.rateRow}>
               <div className={styles.iconAndName}>
                 <div className={styles.circleIcon}>
@@ -80,7 +78,7 @@ const Hero = ({ rates = [] }) => {
 
         </div>
 
-        {/* RIGHT SIDE */}
+ 
         <div className={styles.rightContent}>
           <h3>RÁPIDO Y SEGURO</h3>
           <h1>¿Cansado de Buscar?</h1>
@@ -93,7 +91,7 @@ const Hero = ({ rates = [] }) => {
           </p>
 
           <a
-          href="https://wa.me/573001112233"
+          href="https://wa.me/573246435412"
           target="_blank"
           className={styles.whatsappBtn}
           >
@@ -104,7 +102,7 @@ const Hero = ({ rates = [] }) => {
 
       </div>
 
-      {/* CURVA INFERIOR */}
+    
       <div className={styles.curveBottom}></div>
     </section>
   );

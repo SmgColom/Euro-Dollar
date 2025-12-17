@@ -1,14 +1,14 @@
 @use "sass:color";
 @use '@/styles/scss/abstracts/' as *;
 
-/* WRAPPER GENERAL */
+
 .calculatorWrapper {
   width: 100%;
   padding: 2rem 0;
   text-align: center;
 }
 
-/* TÍTULO */
+
 .title {
   font-family: 'Work Sans', sans-serif;
   font-size: 52px;
@@ -20,7 +20,7 @@
   }
 }
 
-/* CONTENEDOR PRINCIPAL */
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -34,7 +34,7 @@
   }
 }
 
-/* LEFT COLUMN */
+
 .Izquierda {
   display: flex;
   flex-direction: column;
@@ -73,7 +73,6 @@
   }
 }
 
-/* RIGHT CARD */
 .Derecha {
   height: 550px;
   width: 600px;
@@ -131,7 +130,7 @@
   }
 }
 
-/* RESULT */
+
 .result {
   font-size: 20px;
   font-family: Open Sans, sans-serif;
@@ -193,10 +192,6 @@
 }
 
 
-
-/* ------------------------------------------------------
-   🎯 iPad Mini (768px) → centrar todo
-------------------------------------------------------- */
 @media (min-width: 768px) and (max-width: 1024px) {
   .calculatorWrapper {
     flex-direction: column;

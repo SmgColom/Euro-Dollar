@@ -4,29 +4,29 @@ import Image from "next/image";
 
 const Calculator = ({ rates = [] }) => {
 
-  // Normalizar nombres de divisa
+  
   const normalize = (str) =>
     str?.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
 
-  // Preparar divisas
+  
     const monedas = rates.map((r) => ({
     nombre: normalize(r.moneda),
     compra: r.compra ? Number(r.compra) : null,
     venta: r.venta ? Number(r.venta) : null,
     }));
 
-  // Estados
+
   const [tengo, setTengo] = useState("");
   const [cambioA, setCambioA] = useState("");
   const [cantidadTengo, setCantidadTengo] = useState("");
   const [resultado, setResultado] = useState("");
 
-  // Capitalizar texto
+ 
   const capitalize = (str) =>
     str ? str.charAt(0).toUpperCase() + str.slice(1) : "";
 
-  // Formatear resultado en formato moneda
+ 
   const formatMoney = (value, currencyName) => {
     if (!value) return "";
     return Number(value).toLocaleString("es-CO", {
@@ -35,7 +35,7 @@ const Calculator = ({ rates = [] }) => {
     });
   };
 
-  // Cálculo principal
+ 
   useEffect(() => {
     if (!tengo || !cambioA || !cantidadTengo) {
       setResultado("");
@@ -66,7 +66,7 @@ const Calculator = ({ rates = [] }) => {
 
     let res = 0;
 
-    // 👉 COP → DIVISA
+   
     if (tengoCOP && !cambioCOP) {
       if (!monedaCambio.venta) {
         setResultado("");
@@ -75,7 +75,7 @@ const Calculator = ({ rates = [] }) => {
       res = cantidad / monedaCambio.venta;
     }
 
-    // 👉 DIVISA → COP
+    
     else if (!tengoCOP && cambioCOP) {
       if (!monedaTengo.compra) {
         setResultado("");
@@ -84,12 +84,11 @@ const Calculator = ({ rates = [] }) => {
       res = cantidad * monedaTengo.compra;
     }
 
-    // 👉 MISMA DIVISA (COP → COP)
+  
     else if (tengoCOP && cambioCOP) {
       res = cantidad;
     }
 
-    // 👉 DIVISA → DIVISA
     else {
       if (!monedaTengo.compra || !monedaCambio.venta) {
         setResultado("");
@@ -107,7 +106,7 @@ const Calculator = ({ rates = [] }) => {
 
       <div className={styles.container}>
 
-        {/* IZQUIERDA */}
+       
         <div className={styles.Izquierda}>
           <div className={styles.featureItem}>
             <Image src="/Seguridad.svg" alt="Seguridad" width={100} height={100} />
@@ -127,10 +126,10 @@ const Calculator = ({ rates = [] }) => {
           </div>
         </div>
 
-        {/* DERECHA */}
+      
         <div className={styles.Derecha}>
 
-          {/* TENGO */}
+
           <div className={styles.row}>
             <button className={styles.actionBtn}>Tengo</button>
 
@@ -150,7 +149,7 @@ const Calculator = ({ rates = [] }) => {
             </div>
           </div>
 
-          {/* CAMBIO A */}
+    
           <div className={styles.row}>
             <button className={styles.actionBtn}>Cambio A</button>
 
@@ -170,7 +169,6 @@ const Calculator = ({ rates = [] }) => {
             </div>
           </div>
 
-          {/* CANTIDAD */}
           <div className={styles.row}>
             <button className={styles.actionBtn}>
               {tengo ? `Cuantos ${capitalize(tengo)} Tengo` : "Cuantos Tengo"}
@@ -185,7 +183,7 @@ const Calculator = ({ rates = [] }) => {
             />
           </div>
 
-          {/* RESULTADO */}
+    
           <div className={styles.row}>
             <button className={styles.actionBtn}>Obtengo</button>
 

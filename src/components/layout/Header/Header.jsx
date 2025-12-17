@@ -41,15 +41,13 @@ function Header() {
 />
 </div>
 
-
-      {/* Botón hamburguesa */}
       <div className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)}>
         <span></span>
         <span></span>
         <span></span>
       </div>
 
-      {/* Menú de navegación con clase activa si está abierto */}
+
       <nav className={`${styles.nav} ${menuOpen ? styles.active : ''}`}>
         <ul>
           <li><Link href="#inicio" onClick={() => setMenuOpen(false)}>Tasa</Link></li>

@@ -137,26 +137,20 @@
     border-radius: 8px;
   }
 
-  /* ------------------------------------------
-     🎯 TABLET (iPad / iPad Air / iPad Pro)
-     834px – 1366px
-     Sin dañar desktop ni móviles
-  ------------------------------------------- */
+
   @media (min-width: 834px) and (max-width: 1366px) {
-    padding: 1.25rem 3rem;     /* más equilibrado para tablet */
+    padding: 1.25rem 3rem;     
 
     .brand img {
-      height: 50px;           /* ligeramente más pequeño */
+      height: 50px;           
     }
 
     .nav ul li {
-      margin-left: 2rem;      /* reduce espacio entre items */
+      margin-left: 2rem;      
     }
   }
 
-  /* ------------------------------------------
-     📱 MOBILE VERSION
-  ------------------------------------------- */
+
   @media (max-width: 768px) {
     .brand {
       position: absolute;
@@ -257,9 +251,7 @@
     }
   }
 
-  /* ------------------------------------------
-     Desktop: oculta hamburguesa
-  ------------------------------------------- */
+ 
   @media (min-width: 769px) {
     .hamburger {
       display: none;

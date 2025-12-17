@@ -1,20 +1,20 @@
-.app {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
+  .app {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
 
- 
-  overflow-x: hidden;
-}
+  
+    overflow-x: hidden;
+  }
 
-.main {
-  margin-top: 6rem;
-  width: 100%;
-  flex: 1 0 auto;
-  transition: margin-top 0.3s ease;
-}
+  .main {
+    margin-top: 6rem;
+    width: 100%;
+    flex: 1 0 auto;
+    transition: margin-top 0.3s ease;
+  }
 
-body.menu-open main {
-  margin-top: 20rem !important;
-}
+  body.menu-open main {
+    margin-top: 20rem !important;
+  }
