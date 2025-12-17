@@ -197,6 +197,10 @@
     font-size: 40px;
     font-family: Work Sans, sans-serif;
     color: $brandColor;
+
+        @media (max-width: 430px) {
+      margin-top: 0px;
+    }
   }
 
   p {
