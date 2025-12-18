@@ -1,6 +1,7 @@
 import styles from "./Content.module.scss";
 import Image from "next/image";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
+import { trackEvent } from "@/lib/google-analytics/events";
 
 
 const Hero = ({ rates = [] }) => {
@@ -90,14 +91,22 @@ const Hero = ({ rates = [] }) => {
             C.C. Oviedo (Milla de Oro) y el Aeropuerto JMC.
           </p>
 
-          <a
+        <a
           href="https://wa.me/573246435412"
           target="_blank"
           className={styles.whatsappBtn}
-          >
+          onClick={() =>
+            trackEvent({
+              action: "click_whatsapp",
+              category: "contact",
+              label: "whatsapp_home",
+            })
+          }
+        >
           <img src="/Digital_Glyph_Green.svg" alt="WhatsApp" />
           <span className={styles.whatsappText}>Habla con nosotros</span>
         </a>
+
         </div>
 
       </div>

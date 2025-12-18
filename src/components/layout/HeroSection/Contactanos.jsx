@@ -4,6 +4,7 @@ import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
 import { ImMail4 } from "react-icons/im";
 import { PiPhoneOutgoingFill } from "react-icons/pi";
+import { trackEvent } from "@/lib/google-analytics/events";
 
 const Contactanos = () => {
   return (
@@ -49,14 +50,22 @@ const Contactanos = () => {
                     <ImMail4 size={100} color='#18488B'/>
                     </a>
                 </div>
-                                <div>
-                    <a href="tel:+573246435412" 
-                       title="Llamar" 
-                       aria-label="Llamar por teléfono" 
-                        >
-                    <PiPhoneOutgoingFill size={100} color='#18488B'/>
-                    </a>
-                </div>
+                  <div>
+                  <a 
+                    href="tel:+573246435412" 
+                    title="Llamar" 
+                    aria-label="Llamar por teléfono"
+                    onClick={() =>
+                      trackEvent({
+                        action: "click_phone",
+                        category: "contact",
+                        label: "phone_header",
+                      })
+                    }
+                  >
+                    <PiPhoneOutgoingFill size={100} color="#18488B" />
+                  </a>
+                  </div>
 
 
           </div>
