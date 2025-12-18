@@ -7,7 +7,7 @@ export default function Politica() {
       <div className={styles.tarjeta}>
         <div className={styles.header}>
           <TbContract size={80} color='# 18488B'/>
-          <h1 className={styles.title}>Política De Privacidad</h1>
+          <h2 className={styles.title}>Política De Privacidad</h2>
         </div>
 
         <p className={styles.content}>Última actualización: 18/11/2025</p>
