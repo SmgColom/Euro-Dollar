@@ -85,11 +85,10 @@ export default function Politica() {
           <p>
             Si tienes preguntas o inquietudes sobre nuestra Política de Privacidad, por favor contáctanos en:
             <br /><br />
-            Correo electrónico: gerencia@eurodollarcolombia.com
-            <br />
-                        <br /><br />
+            Correo electrónico: 
+            gerencia@eurodollarcolombia.com
             Teléfono: +57 324 6435412
-            <br />
+   
             Dirección: Cra. 43A #6S-15, Local 168, El Poblado, Medellín.
           </p>
 
