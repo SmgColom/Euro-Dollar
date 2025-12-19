@@ -8,11 +8,18 @@ import Layout from "@/components/layout";
 function App({ Component, pageProps }) {
   const router = useRouter();
 
-  useEffect(() => {
-    const handleRouteChange = (url) => {};
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => router.events.off("routeChangeComplete", handleRouteChange);
-  }, [router.events]);
+useEffect(() => {
+  const handleRouteChange = (url) => {
+    if (window.gtag) {
+      window.gtag("event", "page_view", {
+        page_path: url,
+      });
+    }
+  };
+
+  router.events.on("routeChangeComplete", handleRouteChange);
+  return () => router.events.off("routeChangeComplete", handleRouteChange);
+}, [router.events]);
 
   return (
     <Fragment>
@@ -54,16 +61,14 @@ function App({ Component, pageProps }) {
   src="https://www.googletagmanager.com/gtag/js?id=G-LL90ZEJSB9"
 />
 
-<Script
-  id="ga4-init"
-  strategy="afterInteractive"
->
+<Script id="ga4-init" strategy="afterInteractive">
   {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-LL90ZEJSB9', {
       page_path: window.location.pathname,
+      debug_mode: ${process.env.NODE_ENV === "development"}
     });
   `}
 </Script>

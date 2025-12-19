@@ -21,7 +21,7 @@
   z-index: 1;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem 6rem 0rem 2rem;
+  padding: 2rem 6rem 0rem 6rem;
   display: flex;
   flex-direction: column;
 }
@@ -43,6 +43,10 @@
 
   @media (max-width: 900px) {
     flex-direction: column;
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px){
+    margin-right: 3rem;
   }
 }
 
@@ -74,6 +78,7 @@
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
   }
 }
 
