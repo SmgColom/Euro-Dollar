@@ -17,17 +17,25 @@
   }
 }
 
-
 .heroContent {
   max-width: 1500px;
   margin: 0 auto;
-  padding: 2rem 3rem 2rem 6rem;
+
+  
+  padding: 2rem 3rem 2rem 3rem;
+
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
-  flex-wrap: wrap;
-  min-width: 0;
+
   
+  gap: 2rem;
+
+  
+  flex-wrap: nowrap;
+
+  min-width: 0;
   color: $primaryColor;
   box-sizing: border-box;
 
@@ -36,6 +44,26 @@
   }
 }
 
+@media (max-width: 991px) {
+  .heroContent {
+    flex-wrap: wrap;          
+    flex-direction: column;   
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;    
+  }
+
+  .leftCard,
+  .rightContent {
+    width: 100%;
+    max-width: 700px;         
+    height: auto;
+  }
+
+  .rightContent {
+    margin-top: 0;            
+  }
+}
 
 .leftCard {
   display: flex;
@@ -44,12 +72,16 @@
   color: $complementaryColor;
   padding: 1rem;
   border-radius: 25px;
-  width: 600px;
-  max-width: 100%; 
+
+ 
+  width: auto;
+  max-width: 600px;
+  flex: 1 1 0;
+  min-width: 0;
+
   height: 550px;
   box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
-
 
   @media (max-width: 430px) {
     height: auto;
@@ -68,13 +100,11 @@
   }
 }
 
-
 .ratesTable {
   width: 100%;
   display: grid;
   gap: 1rem;
 }
-
 
 .gridHeader {
   display: grid;
@@ -91,7 +121,6 @@
     font-size: 16px;
   }
 }
-
 
 .rateRow {
   display: grid;
@@ -110,7 +139,6 @@
   }
 }
 
-
 .iconAndName {
   display: flex;
   align-items: center;
@@ -120,7 +148,6 @@
     font-size: 1.5rem;
   }
 }
-
 
 .circleIcon {
   width: 55px;
@@ -138,7 +165,6 @@
     object-fit: cover;
   }
 }
-
 
 .warningRow {
   display: flex;
@@ -167,16 +193,20 @@
   flex-direction: column;
   padding: 1rem;
   border-radius: 25px;
-  width: 600px;
+
+ 
+  width: auto;
+  max-width: 600px;
+  flex: 1 1 0;
+  min-width: 0;
+
   height: 550px;
-  max-width: 100%;
   align-items: center;
   box-sizing: border-box;
 
   @media (max-width: 430px) {
     width: 100%;
     padding: 0rem;
-   
   }
 
   h3 {
@@ -198,7 +228,7 @@
     font-family: Work Sans, sans-serif;
     color: $brandColor;
 
-        @media (max-width: 430px) {
+    @media (max-width: 430px) {
       margin-top: 0px;
     }
   }
@@ -218,7 +248,10 @@
   bottom: 30px;
   right: 30px;
   z-index: 9999;
-  margin-left: 7.5rem;
+
+  
+  margin-left: 0;
+
   display: inline-flex;
   align-items: center;
   background: white;
@@ -242,11 +275,9 @@
   }
 }
 
-
 .whatsappText {
   margin-left: 0.2rem;
 }
-
 
 @media (max-width: 600px) {
   .whatsappBtn {
@@ -277,10 +308,8 @@
   z-index: 0;
 }
 
-
 @media (max-width: 600px) {
   .whatsappBtn {
-  
     padding: 0.6rem 1rem;
     font-size: 16px;
 
@@ -297,6 +326,9 @@
     justify-content: center;
     gap: 2rem ;
     padding: 3rem 3rem 0rem 3rem;
+
+  
+    flex-wrap: wrap;
   }
 
   .leftCard,
@@ -311,18 +343,17 @@
   }
 }
 
-
 @media (min-width: 650px) and (max-width: 991px) {
-  
   .heroContent {
     flex-direction: column ;
     align-items: center ;
     justify-content: center ;
     padding: 3rem 2rem 1rem 1rem;
     gap: 2rem ;
+
+    flex-wrap: wrap;
   }
 
- 
   .leftCard,
   .rightContent {
     width: 100% ;       
@@ -334,7 +365,6 @@
   .rightContent h3 {
     margin-top: 1rem !important;
   }
-
 
   .whatsappBtn {
     bottom: 18px;
@@ -354,5 +384,6 @@
     margin-right: 0;
   }
 }
+
 
 

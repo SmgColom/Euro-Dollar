@@ -86,7 +86,7 @@ const Hero = ({ rates = [] }) => {
 
           <p>
             ¿Tienes un grupo, excursión o una gran cantidad?
-            Te garantizamos la tasa más ventajosa del mercado, con la
+            Te garantizamos la tasa más competitiva del mercado, con la
             confidencialidad y protección exclusiva de nuestras oficinas en el
             C.C. Oviedo (Milla de Oro) y el Aeropuerto JMC.
           </p>
