@@ -25,7 +25,7 @@ const Contactanos = () => {
             />
             </div>
                 <div>
-                    <a href="https://instagram.com/mile_toro" 
+                    <a href="https://www.instagram.com/eurodollarcolombia?igsh=aHQxcGFjMnB5Nzh6" 
                        title="Instagram" 
                        aria-label="Instagram" 
                        target="_blank" 

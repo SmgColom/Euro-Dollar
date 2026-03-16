@@ -21,7 +21,7 @@ module.exports = (phase) => {
   };
 
   const env = {
-    SERVER_NAME: isDev ? "http://localhost:3000/" : "https://miletoroseguros.vercel.app/",
+    SERVER_NAME: isDev ? "http://localhost:3000/" : "https://www.eurodollarcolombia.com/",
     NEWS_API_KEY: process.env.NEWS_API_KEY,
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
     MONGO_ATLAS_CONNECTION_URI: process.env.MONGO_ATLAS_URI,
