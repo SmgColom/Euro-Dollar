@@ -25,7 +25,7 @@ function Footer() {
 
       <div className={styles.socialIcons}>
         <a 
-          href="https://instagram.com/mile_toro" 
+          href="https://www.instagram.com/eurodollarcolombia?igsh=aHQxcGFjMnB5Nzh6" 
           title="Instagram" 
           aria-label="Instagram" 
           target="_blank" 
@@ -35,7 +35,7 @@ function Footer() {
         </a>
 
         <a 
-          href="https://www.facebook.com/mile.torogarcia?mibextid=wwXIfr&mibextid=wwXIfr" 
+          href="https://www.facebook.com/share/1JUB6tECk2/" 
           title="Facebook" 
           aria-label="Facebook"
           target="_blank"

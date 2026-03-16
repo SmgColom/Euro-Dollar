@@ -29,7 +29,7 @@ const Sucursales = () => {
             </div>
 
             <a
-              href="AQUI_VA_TU_LINK_DE_GOOGLE_MAPS"
+              href="https://maps.app.goo.gl/N6UaQNcdNGmS9SKJ8"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btn}
@@ -55,7 +55,7 @@ const Sucursales = () => {
 
             <div className={styles.photoWrapper}>
               <Image
-                src="/Sede_Oviedo.jpeg"
+                src="/Sede_JMC.jpeg"
                 width={200}
                 height={100}
                 alt="Sucursal Aeropuerto José María Córdova"
@@ -64,7 +64,7 @@ const Sucursales = () => {
             </div>
 
             <a
-              href="AQUI_VA_TU_LINK_DE_GOOGLE_MAPS"
+              href="https://maps.app.goo.gl/utXABxFiZq5vJm7g6"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btn}
