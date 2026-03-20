@@ -8,18 +8,22 @@ import Layout from "@/components/layout";
 function App({ Component, pageProps }) {
   const router = useRouter();
 
-useEffect(() => {
-  const handleRouteChange = (url) => {
-    if (window.gtag) {
-      window.gtag("event", "page_view", {
-        page_path: url,
-      });
-    }
-  };
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      if (window.gtag) {
+        window.gtag("event", "page_view", {
+          page_path: url,
+        });
+      }
 
-  router.events.on("routeChangeComplete", handleRouteChange);
-  return () => router.events.off("routeChangeComplete", handleRouteChange);
-}, [router.events]);
+      if (window.fbq) {
+        window.fbq("track", "PageView");
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => router.events.off("routeChangeComplete", handleRouteChange);
+  }, [router.events]);
 
   return (
     <Fragment>
@@ -56,23 +60,43 @@ useEffect(() => {
         }}
       />
 
+      {/* Google tag: GA4 + Google Ads */}
       <Script
-  strategy="afterInteractive"
-  src="https://www.googletagmanager.com/gtag/js?id=G-LL90ZEJSB9"
-/>
+        strategy="afterInteractive"
+        src="https://www.googletagmanager.com/gtag/js?id=G-LL90ZEJSB9"
+      />
 
-<Script id="ga4-init" strategy="afterInteractive">
-  {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LL90ZEJSB9', {
-      page_path: window.location.pathname,
-      debug_mode: ${process.env.NODE_ENV === "development"}
-    });
-  `}
-</Script>
+      <Script id="ga4-init" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          gtag('js', new Date());
 
+          gtag('config', 'G-LL90ZEJSB9', {
+            page_path: window.location.pathname,
+            debug_mode: ${process.env.NODE_ENV === "development"}
+          });
+
+          gtag('config', 'AW-17998068632');
+        `}
+      </Script>
+
+      {/* Meta Pixel */}
+      <Script id="meta-pixel" strategy="afterInteractive">
+        {`
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          fbq('init', '1655475172463733');
+          fbq('track', 'PageView');
+        `}
+      </Script>
 
       <Head>
         <link
@@ -131,6 +155,16 @@ useEffect(() => {
           content="https://eurodollarcolombia.com/Logo.png"
         />
       </Head>
+
+      <noscript>
+        <img
+          height="1"
+          width="1"
+          style={{ display: "none" }}
+          src="https://www.facebook.com/tr?id=1655475172463733&ev=PageView&noscript=1"
+          alt=""
+        />
+      </noscript>
 
       <Layout>
         <Component {...pageProps} />
