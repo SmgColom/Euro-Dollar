@@ -29,7 +29,7 @@ const Sucursales = () => {
             </div>
 
             <a
-              href="https://maps.app.goo.gl/N6UaQNcdNGmS9SKJ8"
+              href="https://maps.app.goo.gl/Xf4wuBCPVFWofeYA6"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.btn}
