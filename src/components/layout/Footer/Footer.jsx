@@ -45,7 +45,7 @@ function Footer() {
         </a>
 
         <a 
-          href="https://www.facebook.com/mile.torogarcia?mibextid=wwXIfr&mibextid=wwXIfr" 
+          href="Aqui va link de tiktok" 
           title="Tiktok" 
           aria-label="Tiktok"
           target="_blank"

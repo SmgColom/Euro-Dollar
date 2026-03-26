@@ -22,12 +22,15 @@ function App({ Component, pageProps }) {
     };
 
     router.events.on("routeChangeComplete", handleRouteChange);
-    return () => router.events.off("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
   }, [router.events]);
 
   return (
     <Fragment>
-      {/* ✅ Schema.org – DEBE ir fuera de <Head> */}
+      {/* Schema.org */}
       <Script
         id="schema-financial-service"
         type="application/ld+json"
